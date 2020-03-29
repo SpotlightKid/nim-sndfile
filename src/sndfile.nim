@@ -1,5 +1,5 @@
 when defined(windows):
-    const soname = "libsndfile.dll"
+    const soname = "libsndfile(|-1|-2).dll"
 elif defined(macosx):
     const soname = "libsndfile.dylib"
 else:
