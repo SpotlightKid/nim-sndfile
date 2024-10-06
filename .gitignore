@@ -1,0 +1,3 @@
+examples/*
+!examples/*.nim
+!examples/*.nims

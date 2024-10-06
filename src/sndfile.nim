@@ -157,7 +157,9 @@ type
     # because nim enums don't allow duplicate values
     SF_FORMAT_ENDMASK      = 0x30000000
 
-proc open*(path: cstring, mode: TFILE_MODE, sfinfo: ptr TINFO): ptr TSNDFILE  {.libsnd, importc: "sf_open".}
+proc version_string*(): cstring {.libsnd, importc: "sf_version_string".}
+
+proc open*(path: cstring, mode: TFILE_MODE, sfinfo: ptr TINFO): ptr TSNDFILE {.libsnd, importc: "sf_open".}
 
 proc close*(sndfile: ptr TSNDFILE): ptr TSNDFILE {.libsnd, importc: "sf_close".}
 
