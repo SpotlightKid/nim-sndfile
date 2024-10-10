@@ -1,3 +1,6 @@
 examples/*
 !examples/*.nim
 !examples/*.nims
+tests/*
+!tests/*.nim
+!tests/*.nims

@@ -192,24 +192,3 @@ proc writef_short*(sndfile: ptr TSNDFILE, buffer_ptr: ptr cshort; items: TCOUNT)
 proc writef_int*(sndfile: ptr TSNDFILE, buffer_ptr: ptr cint; items: TCOUNT): TCOUNT {.libsnd, importc: "sf_writef_int".}
 proc writef_float*(sndfile: ptr TSNDFILE, buffer_ptr: ptr cfloat; items: TCOUNT): TCOUNT {.libsnd, importc: "sf_writef_float".}
 proc writef_double*(sndfile: ptr TSNDFILE, buffer_ptr: ptr cdouble; items: TCOUNT): TCOUNT {.libsnd, importc: "sf_writef_double".}
-
-when isMainModule:
-  var info: TINFO
-  var sndfile: ptr TSNDFILE
-  info.format = 0
-
-  snd_file = open("test.wav", READ, cast[ptr TINFO](info.addr))
-
-  echo info
-  # expect info to match snd file header
-  echo format_check(cast[ptr TINFO](info.addr))
-
-  # expect 5
-  echo seek(snd_file, 5, SEEK_SET)
-  discard seek(snd_File, 0, SEEK_SET)
-
-  let num_items = cast[cint](info.channels * info.frames)
-  echo num_items
-  var buffer = newSeq[cint](num_items)
-  let items_read = read_int(snd_file, buffer[0].addr, num_items)
-  echo items_read
