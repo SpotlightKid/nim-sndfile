@@ -161,7 +161,7 @@ proc version_string*(): cstring {.libsnd, importc: "sf_version_string".}
 
 proc open*(path: cstring, mode: TFILE_MODE, sfinfo: ptr TINFO): ptr TSNDFILE {.libsnd, importc: "sf_open".}
 
-proc close*(sndfile: ptr TSNDFILE): ptr TSNDFILE {.libsnd, importc: "sf_close".}
+proc close*(sndfile: ptr TSNDFILE): cint {.libsnd, importc: "sf_close", discardable.}
 
 proc format_check*(info: ptr TINFO): TBOOL {.libsnd, importc: "sf_format_check".}
 
