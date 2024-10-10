@@ -20,9 +20,8 @@ sdl2.getVersion(version)
 echo(&"SDL version: {version.major}.{version.minor}.{version.patch}")
 
 # Open the file
-
-var info: TINFO
-var file = sndfile.open(filename.cstring, sndfile.READ, addr info)
+var info: SFInfo
+var file = sndfile.open(filename.cstring, SFMode.READ, info.addr)
 
 if file == nil:
   echo $file.strerror()
@@ -39,7 +38,7 @@ const bufferSizeInSamples = 4096
 
 proc audioCallback(userdata: pointer; stream: ptr uint8; len: cint) {.cdecl.} =
   var buffer: array[bufferSizeInSamples, cfloat]
-  let count = file.read_float(addr buffer[0], bufferSizeInSamples)
+  let count = file.readFloat(addr buffer[0], bufferSizeInSamples)
 
   if count == 0:
     echo("End of file reached")
