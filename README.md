@@ -1,10 +1,23 @@
 nim-sndfile
 ===========
 
-Wrapper for libsndfile.
+A wrapper of [libsndfile] for the [Nim] programming language.
 
-libsndfile is quite small, I have however only wrapped those functions that I have used myself so far.
+The libsndfile [API] is quite small, however the following functions are
+currently still missing from this wrapper:
 
-Feel free to fork, or make a PR wrapping the rest.
+* `sf_read_raw`
+* `sf_write_raw`
+* `sf_get_string`
+* `sf_set_string`
+* `sf_current_byterate`
+* `sf_set_chunk`
+* `sf_get_chunk_iterator`
+* `sf_next_chunk_iterator`
+* `sf_get_chunk_size`
+* `sf_get_chunk_data`
 
 
+[API]: https://libsndfile.github.io/libsndfile/api.html
+[libsndfile]: https://libsndfile.github.io/libsndfile/
+[Nim]: https://nim-lang.org/s
