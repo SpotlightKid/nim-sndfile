@@ -12,3 +12,4 @@ taskrequires "examples", "sdl2"
 
 task examples, "Build examples":
     setCommand("compile", "examples/playfile.nim")
+    setCommand("compile", "examples/list_formats.nim")
