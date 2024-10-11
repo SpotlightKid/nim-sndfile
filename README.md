@@ -75,6 +75,20 @@ use them in Nim.
   size is 256.
 
 
+## Author
+
+*nim-sndfile* was written by [Julien Aubert](https://github.com/julienaubert)
+and this fork was updated, re-factored and extended by
+[Christopher Arndt](https://github.com/SpotlightKid), while also applying
+some patches by [James Bradbury](https://github.com/jamesb93).
+
+
+## License
+
+This software is released under the *MIT License*. See the file
+[LICENSE.md](./LICENSE.md) for more information.
+
+
 [API]: https://libsndfile.github.io/libsndfile/api.html
 [libsndfile]: https://libsndfile.github.io/libsndfile/
 [Nim]: https://nim-lang.org/s
