@@ -4,20 +4,20 @@ import sndfile
 
 suite "Tests for reading a simple WAV file":
   test "test reading info":
-    var info: TINFO
-    var sndfile: ptr TSNDFILE
+    var info: SFInfo
+    var sndFile: ptr SndFile
     info.format = 0
 
     sndFile = open(cstring(getAppDir() / "sine.wav"), READ, info.addr)
     check(not sndFile.isNil)
 
     # expect info to match snd file header
-    check(format_check(info.addr) == SF_TRUE)
+    check(formatCheck(info.addr) == TRUE)
 
     check($info == "(frames: 48000, samplerate: 48000, channels: 1, format: 65538, sections: 1, seekable: 1)")
 
-    check(seek(sndFile, 5, SEEK_SET) == 5)
-    discard seek(sndFile, 0, SEEK_SET)
+    check(seek(sndFile, 5, SFSeek.SET) == 5)
+    discard seek(sndFile, 0, SFSeek.SET)
 
     let num_items = cast[cint](info.channels * info.frames)
     check(num_items == 48_000)
