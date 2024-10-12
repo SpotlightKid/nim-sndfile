@@ -349,7 +349,7 @@ type
     reserved*: array[276, char]
     url*: array[1024, char]
     tagTextSize*: uint32
-    tag_text*: array[maxTagTextSize, char]
+    tagText*: array[maxTagTextSize, char]
 
 proc versionString*(): cstring {.libsnd, importc: "sf_version_string".}
 
@@ -386,9 +386,9 @@ proc writeInt*(sndfile: ptr SndFile, buffer_ptr: ptr cint; items: SFCount): SFCo
 proc writeFloat*(sndfile: ptr SndFile, buffer_ptr: ptr cfloat; items: SFCount): SFCount {.libsnd, importc: "sf_write_float".}
 proc writeDouble*(sndfile: ptr SndFile, buffer_ptr: ptr cdouble; items: SFCount): SFCount {.libsnd, importc: "sf_write_double".}
 
-proc writeShhort*(sndfile: ptr SndFile, buffer_ptr: ptr cshort; items: SFCount): SFCount {.libsnd, importc: "sf_writef_short".}
+proc writeFShort*(sndfile: ptr SndFile, buffer_ptr: ptr cshort; items: SFCount): SFCount {.libsnd, importc: "sf_writef_short".}
 proc writeFInt*(sndfile: ptr SndFile, buffer_ptr: ptr cint; items: SFCount): SFCount {.libsnd, importc: "sf_writef_int".}
 proc writeFFloat*(sndfile: ptr SndFile, buffer_ptr: ptr cfloat; items: SFCount): SFCount {.libsnd, importc: "sf_writef_float".}
 proc writeFDouble*(sndfile: ptr SndFile, buffer_ptr: ptr cdouble; items: SFCount): SFCount {.libsnd, importc: "sf_writef_double".}
 
-proc write_sync*(sndfile: ptr SndFile) {.libsnd, importc: "sf_write_sync".}
+proc writeSync*(sndfile: ptr SndFile) {.libsnd, importc: "sf_write_sync".}
