@@ -1,6 +1,23 @@
+# generated API documentation
+.gh-pages
+
+# Example binaries
 examples/*
 !examples/*.nim
 !examples/*.nims
+
+# Tests binaries
 tests/*
 !tests/*.nim
 !tests/*.nims
+
+# Normal ignores:
+nimcache
+nimblecache/
+*.exe
+*.ilk
+*.out
+*.pdb
+
+# Dot files (don't accidentally add .env files etc.)
+.*

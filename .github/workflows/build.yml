@@ -1,0 +1,36 @@
+name: Github Actions
+on: [push, pull_request]
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Check out sources
+        uses: actions/checkout@v4
+      - name: Install Nim
+        uses: jiro4989/setup-nim-action@v2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install libsdnfile
+        uses: ConorMacBride/install-package@v1
+        with:
+          brew: libsndfile
+          apt: libsndfile1-dev
+          choco: libsndfile
+      - name: Update PATH (Windows)
+        if: runner.os == 'Windows'
+        run: Add-Content $env:GITHUB_PATH "C:\Program Files (x86)\libsndfile\bin"
+      - name: Update DYLD_LIBRARY_PATH (macOS)
+        if: runner.os == 'macOS'
+        run: echo "DYLD_LIBRARY_PATH=$(brew --prefix)/lib" >> "$GITHUB_ENV"
+      - name: Run tests
+        run: nimble test -y
+      - name: Build examples (debug)
+        run: nimble examples
+      - name: Build examples (release)
+        run: nimble examples -d:release
