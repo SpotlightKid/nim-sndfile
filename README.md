@@ -75,7 +75,7 @@ use them in Nim.
   size is 256.
 
 
-## Author
+## Authors
 
 *nim-sndfile* was written by [Julien Aubert](https://github.com/julienaubert)
 and this fork was updated, re-factored and extended by
