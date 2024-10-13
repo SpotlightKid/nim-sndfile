@@ -1,4 +1,4 @@
-name: Github Actions
+name: Run tests and build examples
 on: [push, pull_request]
 jobs:
   build:
@@ -31,6 +31,6 @@ jobs:
       - name: Run tests
         run: nimble test -y
       - name: Build examples (debug)
-        run: nimble examples
+        run: nimble examples_debug
       - name: Build examples (release)
-        run: nimble examples -d:release
+        run: nimble examples
