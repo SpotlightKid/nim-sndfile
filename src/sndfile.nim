@@ -377,19 +377,19 @@ proc readInt*(sndfile: ptr SndFile, buffer_ptr: ptr cint, items: SFCount): SFCou
 proc readFloat*(sndfile: ptr SndFile, buffer_ptr: ptr cfloat, items: SFCount): SFCount {.libsnd, importc: "sf_read_float".}
 proc readDouble*(sndfile: ptr SndFile, buffer_ptr: ptr cdouble, items: SFCount): SFCount {.libsnd, importc: "sf_read_double".}
 
-proc readFShort*(sndfile: ptr SndFile, buffer_ptr: ptr cshort, items: SFCount): SFCount {.libsnd, importc: "sf_readf_short".}
-proc readFInt*(sndfile: ptr SndFile, buffer_ptr: ptr cint, items: SFCount): SFCount {.libsnd, importc: "sf_readf_int".}
-proc readFFloat*(sndfile: ptr SndFile, buffer_ptr: ptr cfloat, items: SFCount): SFCount {.libsnd, importc: "sf_readf_float".}
-proc readFDouble*(sndfile: ptr SndFile, buffer_ptr: ptr cdouble, items: SFCount): SFCount {.libsnd, importc: "sf_readf_double".}
+proc readFShort*(sndfile: ptr SndFile, buffer_ptr: ptr cshort, frames: SFCount): SFCount {.libsnd, importc: "sf_readf_short".}
+proc readFInt*(sndfile: ptr SndFile, buffer_ptr: ptr cint, frames: SFCount): SFCount {.libsnd, importc: "sf_readf_int".}
+proc readFFloat*(sndfile: ptr SndFile, buffer_ptr: ptr cfloat, frames: SFCount): SFCount {.libsnd, importc: "sf_readf_float".}
+proc readFDouble*(sndfile: ptr SndFile, buffer_ptr: ptr cdouble, frames: SFCount): SFCount {.libsnd, importc: "sf_readf_double".}
 
 proc writeShort*(sndfile: ptr SndFile, buffer_ptr: ptr cshort; items: SFCount): SFCount {.libsnd, importc: "sf_write_short".}
 proc writeInt*(sndfile: ptr SndFile, buffer_ptr: ptr cint; items: SFCount): SFCount {.libsnd, importc: "sf_write_int".}
 proc writeFloat*(sndfile: ptr SndFile, buffer_ptr: ptr cfloat; items: SFCount): SFCount {.libsnd, importc: "sf_write_float".}
 proc writeDouble*(sndfile: ptr SndFile, buffer_ptr: ptr cdouble; items: SFCount): SFCount {.libsnd, importc: "sf_write_double".}
 
-proc writeFShort*(sndfile: ptr SndFile, buffer_ptr: ptr cshort; items: SFCount): SFCount {.libsnd, importc: "sf_writef_short".}
-proc writeFInt*(sndfile: ptr SndFile, buffer_ptr: ptr cint; items: SFCount): SFCount {.libsnd, importc: "sf_writef_int".}
-proc writeFFloat*(sndfile: ptr SndFile, buffer_ptr: ptr cfloat; items: SFCount): SFCount {.libsnd, importc: "sf_writef_float".}
-proc writeFDouble*(sndfile: ptr SndFile, buffer_ptr: ptr cdouble; items: SFCount): SFCount {.libsnd, importc: "sf_writef_double".}
+proc writeFShort*(sndfile: ptr SndFile, buffer_ptr: ptr cshort; frames: SFCount): SFCount {.libsnd, importc: "sf_writef_short".}
+proc writeFInt*(sndfile: ptr SndFile, buffer_ptr: ptr cint; frames: SFCount): SFCount {.libsnd, importc: "sf_writef_int".}
+proc writeFFloat*(sndfile: ptr SndFile, buffer_ptr: ptr cfloat; frames: SFCount): SFCount {.libsnd, importc: "sf_writef_float".}
+proc writeFDouble*(sndfile: ptr SndFile, buffer_ptr: ptr cdouble; frames: SFCount): SFCount {.libsnd, importc: "sf_writef_double".}
 
 proc writeSync*(sndfile: ptr SndFile) {.libsnd, importc: "sf_write_sync".}
