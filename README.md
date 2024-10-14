@@ -91,4 +91,4 @@ This software is released under the *MIT License*. See the file
 
 [API]: https://libsndfile.github.io/libsndfile/api.html
 [libsndfile]: https://libsndfile.github.io/libsndfile/
-[Nim]: https://nim-lang.org/s
+[Nim]: https://nim-lang.org/
