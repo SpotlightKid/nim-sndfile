@@ -1,5 +1,7 @@
 name: Run tests and build examples
 on: [push, pull_request]
+env:
+  nim_version: "2.2.0"
 jobs:
   build:
     strategy:
@@ -12,11 +14,33 @@ jobs:
     steps:
       - name: Check out sources
         uses: actions/checkout@v4
+      - name: Nim Runtime Cache
+        id: cache-nim
+        uses: actions/cache@v4
+        with:
+          path: ".nim_runtime"
+          key: ${{ runner.os }}-nim-${{ env.nim_version }}
       - name: Install Nim
+        id: install-nim
+        if: ${{ hashFiles('.nim_runtime/bin/nim*') == '' }}
         uses: jiro4989/setup-nim-action@v2
         with:
+          nim-version: ${{ env.nim_version }}
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Install libsdnfile
+      - name: Set PATH for Unix
+        if: ${{ runner.os != 'Windows' && steps.install-nim.outcome == 'skipped' }}
+        shell: bash
+        run: |
+          echo "$(pwd)/.nim_runtime/bin" >> "$GITHUB_PATH"
+          echo "$HOME/.nimble/bin" >> "$GITHUB_PATH"
+      - name: Set PATH for Windows
+        if: ${{ runner.os == 'Windows' && steps.install-nim.outcome == 'skipped' }}
+        shell: pwsh
+        run: |
+          echo "$(Get-Location)\.nim_runtime\bin" >> $Env:GITHUB_PATH
+          mkdir -Force ~\.nimble\bin
+          (Resolve-Path ~\.nimble\bin).Path >> $Env:GITHUB_PATH
+      - name: Install dependency packages (libsdnfile)
         uses: ConorMacBride/install-package@v1
         with:
           brew: libsndfile
