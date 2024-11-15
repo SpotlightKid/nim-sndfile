@@ -55,12 +55,12 @@
   <details open>
     <summary><a class="reference reference-toplevel" href="#7" id="57">Types</a></summary>
     <ul class="simple simple-toc-section">
-      <li><a class="reference" href="#SFAmbisonic" title="SFAmbisonic {.pure.} = enum
+      <li><a class="reference" href="#SFAmbisonic" title="SFAmbisonic {.pure, size: 4.} = enum
   NONE = 64, B_FORMAT = 65">SFAmbisonic</a></li>
-<li><a class="reference" href="#SFBitrateMode" title="SFBitrateMode {.pure.} = enum
+<li><a class="reference" href="#SFBitrateMode" title="SFBitrateMode {.pure, size: 4.} = enum
   CONSTANT, AVERAGE, VARIABLE">SFBitrateMode</a></li>
-<li><a class="reference" href="#SFBool" title="SFBool {.pure.} = enum
-  FALSE = 0, TRUE = 1">SFBool</a></li>
+<li><a class="reference" href="#SFBool" title="SFBool {.pure, size: 4.} = enum
+  FALSE, TRUE">SFBool</a></li>
 <li><a class="reference" href="#SFBroadcastInfo" title="SFBroadcastInfo = object
   description*: array[256, char]
   originator*: array[32, char]
@@ -104,14 +104,14 @@
 <li><a class="reference" href="#SFCartTimer" title="SFCartTimer = object
   usage*: array[4, char]
   value*: int32">SFCartTimer</a></li>
-<li><a class="reference" href="#SFChannelMode" title="SFChannelMode {.pure.} = enum
+<li><a class="reference" href="#SFChannelMode" title="SFChannelMode {.pure, size: 4.} = enum
   INVALID, MONO, LEFT, RIGHT, CENTER, FRONT_LEFT, FRONT_RIGHT, FRONT_CENTER,
   REAR_CENTER, REAR_LEFT, REAR_RIGHT, LFE, FRONT_LEFT_OF_CENTER,
   FRONT_RIGHT_OF_CENTER, SIDE_LEFT, SIDE_RIGHT, TOP_CENTER, TOP_FRONT_LEFT,
   TOP_FRONT_RIGHT, TOP_FRONT_CENTER, TOP_REAR_LEFT, TOP_REAR_RIGHT,
   TOP_REAR_CENTER, AMBISONIC_B_W, AMBISONIC_B_X, AMBISONIC_B_Y, AMBISONIC_B_Z,
   MAX">SFChannelMode</a></li>
-<li><a class="reference" href="#SFCommand" title="SFCommand {.pure.} = enum
+<li><a class="reference" href="#SFCommand" title="SFCommand {.pure, size: 4.} = enum
   GET_LIB_VERSION = 4096, GET_LOG_INFO = 4097, GET_CURRENT_SF_INFO = 4098,
   GET_NORM_DOUBLE = 4112, GET_NORM_FLOAT = 4113, SET_NORM_DOUBLE = 4114,
   SET_NORM_FLOAT = 4115, SET_SCALE_FLOAT_INT_READ = 4116,
@@ -150,12 +150,11 @@
 <li><a class="reference" href="#SFEmbedFileInfo" title="SFEmbedFileInfo = object
   offset*: SFCount
   length*: SFCount">SFEmbedFileInfo</a></li>
-<li><a class="reference" href="#SFEndian" title="SFEndian {.pure.} = enum
+<li><a class="reference" href="#SFEndian" title="SFEndian {.pure, size: 4.} = enum
   FILE = 0, LITTLE = 268435456, BIG = 536870912, CPU = 805306368">SFEndian</a></li>
-<li><a class="reference" href="#SFErr" title="SFErr {.pure.} = enum
-  NO_ERROR = 0, UNRECOGNISED_FORMAT = 1, SYSTEM = 2, MALFORMED_FILE = 3,
-  UNSUPPORTED_ENCODING = 4">SFErr</a></li>
-<li><a class="reference" href="#SFFormat" title="SFFormat {.pure.} = enum
+<li><a class="reference" href="#SFErr" title="SFErr {.pure, size: 4.} = enum
+  NO_ERROR, UNRECOGNISED_FORMAT, SYSTEM, MALFORMED_FILE, UNSUPPORTED_ENCODING">SFErr</a></li>
+<li><a class="reference" href="#SFFormat" title="SFFormat {.pure, size: 4.} = enum
   PCM_S8 = 1, PCM_16 = 2, PCM_24 = 3, PCM_32 = 4, PCM_U8 = 5, FLOAT = 6,
   DOUBLE = 7, ULAW = 16, ALAW = 17, IMA_ADPCM = 18, MS_ADPCM = 19, GSM610 = 32,
   VOX_ADPCM = 33, NMS_ADPCM_16 = 34, NMS_ADPCM_24 = 35, NMS_ADPCM_32 = 36,
@@ -172,7 +171,7 @@
   format*: cint
   name*: cstring
   extension*: cstring">SFFormatInfo</a></li>
-<li><a class="reference" href="#SFFormatMask" title="SFFormatMask {.pure.} = enum
+<li><a class="reference" href="#SFFormatMask" title="SFFormatMask {.pure, size: 4.} = enum
   SUBMASK = 65535, TYPEMASK = 268369920, ENDMASK = 805306368">SFFormatMask</a></li>
 <li><a class="reference" href="#SFInfo" title="SFInfo = object
   frames*: SFCount
@@ -203,13 +202,13 @@
   bpm*: cfloat
   rootKey*: cint
   future*: array[6, cint]">SFLoopInfo</a></li>
-<li><a class="reference" href="#SFLoopMode" title="SFLoopMode {.pure.} = enum
+<li><a class="reference" href="#SFLoopMode" title="SFLoopMode {.pure, size: 4.} = enum
   NONE = 800, FORWARD, BACKWARD, ALTERNATING">SFLoopMode</a></li>
-<li><a class="reference" href="#SFMode" title="SFMode {.pure.} = enum
+<li><a class="reference" href="#SFMode" title="SFMode {.pure, size: 4.} = enum
   READ = 16, WRITE = 32, RDWR = 48">SFMode</a></li>
-<li><a class="reference" href="#SFSeek" title="SFSeek {.pure.} = enum
-  SET = 0, CUR = 1, END = 2">SFSeek</a></li>
-<li><a class="reference" href="#SFStrType" title="SFStrType {.pure.} = enum
+<li><a class="reference" href="#SFSeek" title="SFSeek {.pure, size: 4.} = enum
+  SET, CUR, END">SFSeek</a></li>
+<li><a class="reference" href="#SFStrType" title="SFStrType {.pure, size: 4.} = enum
   TITLE = 1, COPYRIGHT = 2, SOFTWARE = 3, ARTIST = 4, COMMENT = 5, DATE = 6,
   ALBUM = 7, LICENSE = 8, TRACKNUMBER = 9, GENRE = 16">SFStrType</a></li>
 <li><a class="reference" href="#SndFile" title="SndFile = distinct object">SndFile</a></li>
@@ -356,35 +355,35 @@
   <h1><a class="toc-backref" href="#7">Types</a></h1>
   <dl class="item">
     <div id="SFAmbisonic">
-  <dt><pre><a href="sndfile.html#SFAmbisonic"><span class="Identifier">SFAmbisonic</span></a> {.<span class="Identifier">pure</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="sndfile.html#SFAmbisonic"><span class="Identifier">SFAmbisonic</span></a> {.<span class="Identifier">pure</span><span class="Other">,</span> <span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">NONE</span> <span class="Other">=</span> <span class="DecNumber">64</span><span class="Other">,</span> <span class="Identifier">B_FORMAT</span> <span class="Other">=</span> <span class="DecNumber">65</span></pre></dt>
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L34" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L34" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L27" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L27" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
 <div id="SFBitrateMode">
-  <dt><pre><a href="sndfile.html#SFBitrateMode"><span class="Identifier">SFBitrateMode</span></a> {.<span class="Identifier">pure</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="sndfile.html#SFBitrateMode"><span class="Identifier">SFBitrateMode</span></a> {.<span class="Identifier">pure</span><span class="Other">,</span> <span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">CONSTANT</span><span class="Other">,</span> <span class="Identifier">AVERAGE</span><span class="Other">,</span> <span class="Identifier">VARIABLE</span></pre></dt>
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L263" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L263" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L241" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L241" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
 <div id="SFBool">
-  <dt><pre><a href="sndfile.html#SFBool"><span class="Identifier">SFBool</span></a> {.<span class="Identifier">pure</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
-  <span class="Identifier">FALSE</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">TRUE</span> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
+  <dt><pre><a href="sndfile.html#SFBool"><span class="Identifier">SFBool</span></a> {.<span class="Identifier">pure</span><span class="Other">,</span> <span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <span class="Identifier">FALSE</span><span class="Other">,</span> <span class="Identifier">TRUE</span></pre></dt>
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L25" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L25" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L18" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L18" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -459,7 +458,7 @@
   </dd>
 </div>
 <div id="SFChannelMode">
-  <dt><pre><a href="sndfile.html#SFChannelMode"><span class="Identifier">SFChannelMode</span></a> {.<span class="Identifier">pure</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="sndfile.html#SFChannelMode"><span class="Identifier">SFChannelMode</span></a> {.<span class="Identifier">pure</span><span class="Other">,</span> <span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">INVALID</span><span class="Other">,</span> <span class="Identifier">MONO</span><span class="Other">,</span> <span class="Identifier">LEFT</span><span class="Other">,</span> <span class="Identifier">RIGHT</span><span class="Other">,</span> <span class="Identifier">CENTER</span><span class="Other">,</span> <span class="Identifier">FRONT_LEFT</span><span class="Other">,</span> <span class="Identifier">FRONT_RIGHT</span><span class="Other">,</span> <span class="Identifier">FRONT_CENTER</span><span class="Other">,</span>
   <span class="Identifier">REAR_CENTER</span><span class="Other">,</span> <span class="Identifier">REAR_LEFT</span><span class="Other">,</span> <span class="Identifier">REAR_RIGHT</span><span class="Other">,</span> <span class="Identifier">LFE</span><span class="Other">,</span> <span class="Identifier">FRONT_LEFT_OF_CENTER</span><span class="Other">,</span>
   <span class="Identifier">FRONT_RIGHT_OF_CENTER</span><span class="Other">,</span> <span class="Identifier">SIDE_LEFT</span><span class="Other">,</span> <span class="Identifier">SIDE_RIGHT</span><span class="Other">,</span> <span class="Identifier">TOP_CENTER</span><span class="Other">,</span> <span class="Identifier">TOP_FRONT_LEFT</span><span class="Other">,</span>
@@ -469,13 +468,13 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L233" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L233" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L211" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L211" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
 <div id="SFCommand">
-  <dt><pre><a href="sndfile.html#SFCommand"><span class="Identifier">SFCommand</span></a> {.<span class="Identifier">pure</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="sndfile.html#SFCommand"><span class="Identifier">SFCommand</span></a> {.<span class="Identifier">pure</span><span class="Other">,</span> <span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">GET_LIB_VERSION</span> <span class="Other">=</span> <span class="DecNumber">4096</span><span class="Other">,</span> <span class="Identifier">GET_LOG_INFO</span> <span class="Other">=</span> <span class="DecNumber">4097</span><span class="Other">,</span> <span class="Identifier">GET_CURRENT_SF_INFO</span> <span class="Other">=</span> <span class="DecNumber">4098</span><span class="Other">,</span>
   <span class="Identifier">GET_NORM_DOUBLE</span> <span class="Other">=</span> <span class="DecNumber">4112</span><span class="Other">,</span> <span class="Identifier">GET_NORM_FLOAT</span> <span class="Other">=</span> <span class="DecNumber">4113</span><span class="Other">,</span> <span class="Identifier">SET_NORM_DOUBLE</span> <span class="Other">=</span> <span class="DecNumber">4114</span><span class="Other">,</span>
   <span class="Identifier">SET_NORM_FLOAT</span> <span class="Other">=</span> <span class="DecNumber">4115</span><span class="Other">,</span> <span class="Identifier">SET_SCALE_FLOAT_INT_READ</span> <span class="Other">=</span> <span class="DecNumber">4116</span><span class="Other">,</span>
@@ -505,8 +504,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L50" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L50" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L43" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L43" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -515,8 +514,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L13" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L13" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L255" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L255" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -532,8 +531,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L268" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L268" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L274" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L274" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -544,36 +543,35 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L217" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L217" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L270" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L270" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
 <div id="SFEndian">
-  <dt><pre><a href="sndfile.html#SFEndian"><span class="Identifier">SFEndian</span></a> {.<span class="Identifier">pure</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="sndfile.html#SFEndian"><span class="Identifier">SFEndian</span></a> {.<span class="Identifier">pure</span><span class="Other">,</span> <span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">FILE</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">LITTLE</span> <span class="Other">=</span> <span class="DecNumber">268435456</span><span class="Other">,</span> <span class="Identifier">BIG</span> <span class="Other">=</span> <span class="DecNumber">536870912</span><span class="Other">,</span> <span class="Identifier">CPU</span> <span class="Other">=</span> <span class="DecNumber">805306368</span></pre></dt>
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L200" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L200" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L193" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L193" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
 <div id="SFErr">
-  <dt><pre><a href="sndfile.html#SFErr"><span class="Identifier">SFErr</span></a> {.<span class="Identifier">pure</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
-  <span class="Identifier">NO_ERROR</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">UNRECOGNISED_FORMAT</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">SYSTEM</span> <span class="Other">=</span> <span class="DecNumber">2</span><span class="Other">,</span> <span class="Identifier">MALFORMED_FILE</span> <span class="Other">=</span> <span class="DecNumber">3</span><span class="Other">,</span>
-  <span class="Identifier">UNSUPPORTED_ENCODING</span> <span class="Other">=</span> <span class="DecNumber">4</span></pre></dt>
+  <dt><pre><a href="sndfile.html#SFErr"><span class="Identifier">SFErr</span></a> {.<span class="Identifier">pure</span><span class="Other">,</span> <span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <span class="Identifier">NO_ERROR</span><span class="Other">,</span> <span class="Identifier">UNRECOGNISED_FORMAT</span><span class="Other">,</span> <span class="Identifier">SYSTEM</span><span class="Other">,</span> <span class="Identifier">MALFORMED_FILE</span><span class="Other">,</span> <span class="Identifier">UNSUPPORTED_ENCODING</span></pre></dt>
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L43" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L43" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L36" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L36" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
 <div id="SFFormat">
-  <dt><pre><a href="sndfile.html#SFFormat"><span class="Identifier">SFFormat</span></a> {.<span class="Identifier">pure</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="sndfile.html#SFFormat"><span class="Identifier">SFFormat</span></a> {.<span class="Identifier">pure</span><span class="Other">,</span> <span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">PCM_S8</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">PCM_16</span> <span class="Other">=</span> <span class="DecNumber">2</span><span class="Other">,</span> <span class="Identifier">PCM_24</span> <span class="Other">=</span> <span class="DecNumber">3</span><span class="Other">,</span> <span class="Identifier">PCM_32</span> <span class="Other">=</span> <span class="DecNumber">4</span><span class="Other">,</span> <span class="Identifier">PCM_U8</span> <span class="Other">=</span> <span class="DecNumber">5</span><span class="Other">,</span> <span class="Identifier">FLOAT</span> <span class="Other">=</span> <span class="DecNumber">6</span><span class="Other">,</span>
   <span class="Identifier">DOUBLE</span> <span class="Other">=</span> <span class="DecNumber">7</span><span class="Other">,</span> <span class="Identifier">ULAW</span> <span class="Other">=</span> <span class="DecNumber">16</span><span class="Other">,</span> <span class="Identifier">ALAW</span> <span class="Other">=</span> <span class="DecNumber">17</span><span class="Other">,</span> <span class="Identifier">IMA_ADPCM</span> <span class="Other">=</span> <span class="DecNumber">18</span><span class="Other">,</span> <span class="Identifier">MS_ADPCM</span> <span class="Other">=</span> <span class="DecNumber">19</span><span class="Other">,</span> <span class="Identifier">GSM610</span> <span class="Other">=</span> <span class="DecNumber">32</span><span class="Other">,</span>
   <span class="Identifier">VOX_ADPCM</span> <span class="Other">=</span> <span class="DecNumber">33</span><span class="Other">,</span> <span class="Identifier">NMS_ADPCM_16</span> <span class="Other">=</span> <span class="DecNumber">34</span><span class="Other">,</span> <span class="Identifier">NMS_ADPCM_24</span> <span class="Other">=</span> <span class="DecNumber">35</span><span class="Other">,</span> <span class="Identifier">NMS_ADPCM_32</span> <span class="Other">=</span> <span class="DecNumber">36</span><span class="Other">,</span>
@@ -589,8 +587,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L119" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L119" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L112" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L112" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -602,19 +600,19 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L212" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L212" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L265" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L265" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
 <div id="SFFormatMask">
-  <dt><pre><a href="sndfile.html#SFFormatMask"><span class="Identifier">SFFormatMask</span></a> {.<span class="Identifier">pure</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="sndfile.html#SFFormatMask"><span class="Identifier">SFFormatMask</span></a> {.<span class="Identifier">pure</span><span class="Other">,</span> <span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">SUBMASK</span> <span class="Other">=</span> <span class="DecNumber">65535</span><span class="Other">,</span> <span class="Identifier">TYPEMASK</span> <span class="Other">=</span> <span class="DecNumber">268369920</span><span class="Other">,</span> <span class="Identifier">ENDMASK</span> <span class="Other">=</span> <span class="DecNumber">805306368</span></pre></dt>
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L193" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L193" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L186" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L186" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -629,8 +627,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L15" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L15" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L257" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L257" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -684,47 +682,47 @@
   </dd>
 </div>
 <div id="SFLoopMode">
-  <dt><pre><a href="sndfile.html#SFLoopMode"><span class="Identifier">SFLoopMode</span></a> {.<span class="Identifier">pure</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="sndfile.html#SFLoopMode"><span class="Identifier">SFLoopMode</span></a> {.<span class="Identifier">pure</span><span class="Other">,</span> <span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">NONE</span> <span class="Other">=</span> <span class="DecNumber">800</span><span class="Other">,</span> <span class="Identifier">FORWARD</span><span class="Other">,</span> <span class="Identifier">BACKWARD</span><span class="Other">,</span> <span class="Identifier">ALTERNATING</span></pre></dt>
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L277" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L277" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L246" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L246" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
 <div id="SFMode">
-  <dt><pre><a href="sndfile.html#SFMode"><span class="Identifier">SFMode</span></a> {.<span class="Identifier">pure</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="sndfile.html#SFMode"><span class="Identifier">SFMode</span></a> {.<span class="Identifier">pure</span><span class="Other">,</span> <span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">READ</span> <span class="Other">=</span> <span class="DecNumber">16</span><span class="Other">,</span> <span class="Identifier">WRITE</span> <span class="Other">=</span> <span class="DecNumber">32</span><span class="Other">,</span> <span class="Identifier">RDWR</span> <span class="Other">=</span> <span class="DecNumber">48</span></pre></dt>
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L29" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L29" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L22" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L22" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
 <div id="SFSeek">
-  <dt><pre><a href="sndfile.html#SFSeek"><span class="Identifier">SFSeek</span></a> {.<span class="Identifier">pure</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
-  <span class="Identifier">SET</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">CUR</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">END</span> <span class="Other">=</span> <span class="DecNumber">2</span></pre></dt>
+  <dt><pre><a href="sndfile.html#SFSeek"><span class="Identifier">SFSeek</span></a> {.<span class="Identifier">pure</span><span class="Other">,</span> <span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <span class="Identifier">SET</span><span class="Other">,</span> <span class="Identifier">CUR</span><span class="Other">,</span> <span class="Identifier">END</span></pre></dt>
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L38" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L38" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L31" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L31" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
 <div id="SFStrType">
-  <dt><pre><a href="sndfile.html#SFStrType"><span class="Identifier">SFStrType</span></a> {.<span class="Identifier">pure</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="sndfile.html#SFStrType"><span class="Identifier">SFStrType</span></a> {.<span class="Identifier">pure</span><span class="Other">,</span> <span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">TITLE</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">COPYRIGHT</span> <span class="Other">=</span> <span class="DecNumber">2</span><span class="Other">,</span> <span class="Identifier">SOFTWARE</span> <span class="Other">=</span> <span class="DecNumber">3</span><span class="Other">,</span> <span class="Identifier">ARTIST</span> <span class="Other">=</span> <span class="DecNumber">4</span><span class="Other">,</span> <span class="Identifier">COMMENT</span> <span class="Other">=</span> <span class="DecNumber">5</span><span class="Other">,</span> <span class="Identifier">DATE</span> <span class="Other">=</span> <span class="DecNumber">6</span><span class="Other">,</span>
   <span class="Identifier">ALBUM</span> <span class="Other">=</span> <span class="DecNumber">7</span><span class="Other">,</span> <span class="Identifier">LICENSE</span> <span class="Other">=</span> <span class="DecNumber">8</span><span class="Other">,</span> <span class="Identifier">TRACKNUMBER</span> <span class="Other">=</span> <span class="DecNumber">9</span><span class="Other">,</span> <span class="Identifier">GENRE</span> <span class="Other">=</span> <span class="DecNumber">16</span></pre></dt>
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L221" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L221" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L199" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L199" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -733,8 +731,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L11" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L11" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L253" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L253" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -751,8 +749,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L357" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L357" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L358" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L358" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -766,8 +764,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L363" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L363" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L364" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L364" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -780,8 +778,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L372" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L372" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L373" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L373" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -794,8 +792,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L365" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L365" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L366" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L366" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -808,8 +806,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L366" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L366" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L367" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L367" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -822,8 +820,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L359" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L359" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L360" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L360" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -836,8 +834,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L370" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L370" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L371" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L371" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -850,8 +848,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L356" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L356" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L357" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L357" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -865,8 +863,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L377" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L377" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L378" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L378" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -880,8 +878,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L382" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L382" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L383" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L383" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -895,8 +893,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L381" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L381" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L382" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L382" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -910,8 +908,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L380" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L380" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L381" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L381" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -925,8 +923,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L376" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L376" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L377" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L377" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -940,8 +938,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L379" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L379" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L380" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L380" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -955,8 +953,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L375" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L375" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L376" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L376" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -970,8 +968,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L374" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L374" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L375" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L375" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -984,8 +982,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L361" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L361" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L362" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L362" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -999,8 +997,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L369" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L369" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L370" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L370" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1013,8 +1011,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L367" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L367" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L368" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L368" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1028,8 +1026,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L354" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L354" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L355" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L355" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1043,8 +1041,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L387" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L387" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L388" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L388" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1058,8 +1056,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L392" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L392" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L393" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L393" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1073,8 +1071,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L391" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L391" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L392" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L392" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1088,8 +1086,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L390" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L390" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L391" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L391" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1103,8 +1101,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L386" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L386" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L387" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L387" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1118,8 +1116,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L389" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L389" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L390" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L390" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1133,8 +1131,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L385" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L385" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L386" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L386" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1148,8 +1146,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L384" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L384" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L385" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L385" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1163,8 +1161,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L394" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L394" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile.nim#L395" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile.nim#L395" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1180,7 +1178,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2024-10-21 02:43:53 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2024-11-15 14:02:28 UTC</small>
       </div>
     </div>
   </div>
