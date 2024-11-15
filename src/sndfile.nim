@@ -7,47 +7,40 @@ else:
 
 {.pragma: libsnd, cdecl, dynlib: soname.}
 
+
+const codingHistSize {.strdefine: "sfCodingHistSize".}: uint32 = 256
+const maxTagTextSize {.strdefine: "sfMaxTagTextSize".}: uint32 = 256
+
+
 type
-  SndFile* = distinct object
-
-  SFCount* = int64
-
-  SFInfo* = object
-    frames*: SFCount
-    samplerate*: cint
-    channels*: cint
-    format*: cint
-    sections*: cint
-    seekable*: cint
-
   # The following three enums are one enum in soundfile.h
   # Separated here into three enums for clarity
-  SFBool* {.pure.} = enum
-    FALSE = 0
-    TRUE = 1
+  SFBool* {.pure, size: sizeof(cint).} = enum
+    FALSE
+    TRUE
 
-  SFMode* {.pure.} = enum
+  SFMode* {.pure, size: sizeof(cint).} = enum
     READ = 0x10
     WRITE = 0x20
     RDWR = 0x30
 
-  SFAmbisonic* {.pure.} = enum
+  SFAmbisonic* {.pure, size: sizeof(cint).} = enum
     NONE = 0x40
     B_FORMAT = 0x41
 
-  SFSeek* {.pure.} = enum
-    SET = 0
-    CUR = 1
-    END = 2
+  SFSeek* {.pure, size: sizeof(cint).} = enum
+    SET
+    CUR
+    END
 
-  SFErr* {.pure.} = enum
-    NO_ERROR = 0
-    UNRECOGNISED_FORMAT = 1
-    SYSTEM = 2
-    MALFORMED_FILE = 3
-    UNSUPPORTED_ENCODING = 4
+  SFErr* {.pure, size: sizeof(cint).} = enum
+    NO_ERROR
+    UNRECOGNISED_FORMAT
+    SYSTEM
+    MALFORMED_FILE
+    UNSUPPORTED_ENCODING
 
-  SFCommand* {.pure.} = enum
+  SFCommand* {.pure, size: sizeof(cint).} = enum
     GET_LIB_VERSION = 0x1000
     GET_LOG_INFO = 0x1001
     GET_CURRENT_SF_INFO = 0x1002
@@ -116,7 +109,7 @@ type
 
     TEST_IEEE_FLOAT_REPLACE = 0x6001
 
-  SFFormat* {.pure.} = enum
+  SFFormat* {.pure, size: sizeof(cint).} = enum
     # Subtypes
     PCM_S8 = 0x0001
     PCM_16 = 0x0002
@@ -190,35 +183,20 @@ type
     MPC2K = 0x210000
     RF64 = 0x220000
 
-  SFFormatMask* {.pure.} = enum
+  SFFormatMask* {.pure, size: sizeof(cint).} = enum
     SUBMASK = 0x0000FFFF
     TYPEMASK = 0x0FFF0000
     ENDMASK = 0x30000000
 
   # We put the endian-ness options in a a separate enum, because Nim enums
   # don't allow duplicate values and values must be increasing
-  SFEndian* {.pure.} = enum
+  SFEndian* {.pure, size: sizeof(cint).} = enum
     FILE = 0x00000000
     LITTLE = 0x10000000
     BIG = 0x20000000
     CPU = 0x30000000
 
-# Types for data of `sf_command`
-
-const codingHistSize {.strdefine: "sfCodingHistSize".}: uint32 = 256
-const maxTagTextSize {.strdefine: "sfMaxTagTextSize".}: uint32 = 256
-
-type
-  SFFormatInfo* = object
-    format*: cint
-    name*: cstring
-    extension*: cstring
-
-  SFEmbedFileInfo* = object
-    offset*: SFCount
-    length*: SFCount
-
-  SFStrType* {.pure.} = enum
+  SFStrType* {.pure, size: sizeof(cint).} = enum
     TITLE = 0x01
     COPYRIGHT = 0x02
     SOFTWARE = 0x03
@@ -230,7 +208,7 @@ type
     TRACKNUMBER = 0x09
     GENRE = 0x10
 
-  SFChannelMode* {.pure.} = enum
+  SFChannelMode* {.pure, size: sizeof(cint).} = enum
     INVALID
     MONO
     LEFT
@@ -260,10 +238,38 @@ type
     AMBISONIC_B_Z
     MAX
 
-  SFBitrateMode* {.pure.} = enum
+  SFBitrateMode* {.pure, size: sizeof(cint).} = enum
     CONSTANT
     AVERAGE
     VARIABLE
+
+  SFLoopMode* {.pure, size: sizeof(cint).} = enum
+    NONE = 800
+    FORWARD
+    BACKWARD
+    ALTERNATING
+
+type
+  SndFile* = distinct object
+
+  SFCount* = int64
+
+  SFInfo* = object
+    frames*: SFCount
+    samplerate*: cint
+    channels*: cint
+    format*: cint
+    sections*: cint
+    seekable*: cint
+
+  SFFormatInfo* = object
+    format*: cint
+    name*: cstring
+    extension*: cstring
+
+  SFEmbedFileInfo* = object
+    offset*: SFCount
+    length*: SFCount
 
   SFCuePoint* = object
     indx*: int32
@@ -273,12 +279,6 @@ type
     blockStart*: int32
     sampleOffset*: uint32
     name*: array[256, char]
-
-  SFLoopMode* {.pure.} = enum
-    NONE = 800
-    FORWARD
-    BACKWARD
-    ALTERNATING
 
   SFLoop* = object
     mode*: SFLoopMode
@@ -350,6 +350,7 @@ type
     url*: array[1024, char]
     tagTextSize*: uint32
     tagText*: array[maxTagTextSize, char]
+
 
 proc versionString*(): cstring {.libsnd, importc: "sf_version_string".}
 
