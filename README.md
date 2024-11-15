@@ -44,6 +44,7 @@ use them in Nim.
   can use `SFInfo`, `SF_info` etc. The wrapper code generally uses
   `PascalCase`.
 
+
 ## Special cases
 
 | C prefix / name                | Nim enum / symbol      |
@@ -63,6 +64,7 @@ use them in Nim.
 | `SF_INSTRUMENT.loops`          | `SFLoop`               |
 | `SF_INSTRUMENT.loops[n].end`   | `SFLoops.endPos`       |
 | `SF_INSTRUMENT.loops[n].start` | `SFLoops.startPos`     |
+
 
 ## Structs with customizable-sized array fields
 
