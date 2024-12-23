@@ -1,3 +1,5 @@
+## List all file and sample formats supported by the used libsndfile
+
 import std/strformat
 import sndfile
 

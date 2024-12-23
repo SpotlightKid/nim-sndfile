@@ -1,4 +1,4 @@
-# Read a audio file (e.g. WAV or Ogg Vorbis) with libsndfile and play it with sdl2
+## Read an audio file (e.g. WAV or Ogg Vorbis) with libsndfile and play it with sdl2
 
 import std/[math, os, strformat]
 
@@ -23,7 +23,7 @@ echo &"SDL version: {version.major}.{version.minor}.{version.patch}"
 var info: SFInfo
 var file = sndfile.open(filename.cstring, SFMode.READ, info.addr)
 
-if file == nil:
+if file.isNil:
   echo $file.strerror()
   quit(QuitFailure)
 
