@@ -11,7 +11,7 @@ suite "Tests for reading a simple WAV file":
     sndFile = open(cstring(getAppDir() / "sine.wav"), READ, info.addr)
     check(not sndFile.isNil)
 
-    # expect info to match snd file header
+    # expect info read from sound file header to be valid
     check(formatCheck(info.addr) == TRUE)
 
     check($info == "(frames: 48000, samplerate: 48000, channels: 1, format: 65538, sections: 1, seekable: 1)")
@@ -19,7 +19,7 @@ suite "Tests for reading a simple WAV file":
     check(seek(sndFile, 5, SFSeek.SET) == 5)
     discard seek(sndFile, 0, SFSeek.SET)
 
-    let num_items = cast[cint](info.channels * info.frames)
+    let num_items = info.channels * info.frames
     check(num_items == 48_000)
 
     var buffer = newSeq[cint](num_items)
