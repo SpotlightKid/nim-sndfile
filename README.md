@@ -16,11 +16,6 @@ implemented functions) and wraps all functions, *except* the following:
 * `sf_wchar_open`
 * `sf_read_raw`
 * `sf_write_raw`
-* `sf_set_chunk`
-* `sf_get_chunk_iterator`
-* `sf_next_chunk_iterator`
-* `sf_get_chunk_size`
-* `sf_get_chunk_data`
 
 These missing functions may be added in future versions, if it makes sense to
 use them in Nim.
