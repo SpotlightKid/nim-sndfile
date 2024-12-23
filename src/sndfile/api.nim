@@ -287,6 +287,7 @@ type
     count*: uint32
 
   SFInstrument* = object
+    gain*: cint
     basenote*: byte
     detune*: byte
     velocityLo*: byte
