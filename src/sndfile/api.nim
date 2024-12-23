@@ -208,7 +208,7 @@ type
     TRACKNUMBER = 0x09
     GENRE = 0x10
 
-  SFChannelMode* {.pure, size: sizeof(cint).} = enum
+  SFChannelMap* {.pure, size: sizeof(cint).} = enum
     INVALID
     MONO
     LEFT
