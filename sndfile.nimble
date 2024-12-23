@@ -12,6 +12,7 @@ taskrequires "examples", "sdl2"
 taskrequires "examples_debug", "sdl2"
 
 let examples = @[
+    "dump_loops",
     "list_formats",
     "playfile_sdl",
 ]
