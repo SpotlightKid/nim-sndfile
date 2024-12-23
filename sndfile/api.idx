@@ -9,7 +9,7 @@ nim	SFFormat	sndfile/api.html#SFFormat	enum SFFormat		112
 nim	SFFormatMask	sndfile/api.html#SFFormatMask	enum SFFormatMask		186
 nim	SFEndian	sndfile/api.html#SFEndian	enum SFEndian		193
 nim	SFStrType	sndfile/api.html#SFStrType	enum SFStrType		199
-nim	SFChannelMode	sndfile/api.html#SFChannelMode	enum SFChannelMode		211
+nim	SFChannelMap	sndfile/api.html#SFChannelMap	enum SFChannelMap		211
 nim	SFBitrateMode	sndfile/api.html#SFBitrateMode	enum SFBitrateMode		241
 nim	SFLoopMode	sndfile/api.html#SFLoopMode	enum SFLoopMode		246
 nim	SndFile	sndfile/api.html#SndFile	type SndFile		253
@@ -20,36 +20,36 @@ nim	SFEmbedFileInfo	sndfile/api.html#SFEmbedFileInfo	object SFEmbedFileInfo		270
 nim	SFCuePoint	sndfile/api.html#SFCuePoint	object SFCuePoint		274
 nim	SFLoop	sndfile/api.html#SFLoop	object SFLoop		283
 nim	SFInstrument	sndfile/api.html#SFInstrument	object SFInstrument		289
-nim	SFLoopInfo	sndfile/api.html#SFLoopInfo	object SFLoopInfo		299
-nim	SFBroadcastInfo	sndfile/api.html#SFBroadcastInfo	object SFBroadcastInfo		308
-nim	SFCartTimer	sndfile/api.html#SFCartTimer	object SFCartTimer		327
-nim	SFCartInfo	sndfile/api.html#SFCartInfo	object SFCartInfo		331
-nim	versionString	sndfile/api.html#versionString	proc versionString(): cstring		355
-nim	open	sndfile/api.html#open,cstring,SFMode,ptr.SFInfo	proc open(path: cstring; mode: SFMode; sfinfo: ptr SFInfo): ptr SndFile		357
-nim	close	sndfile/api.html#close,ptr.SndFile	proc close(sndfile: ptr SndFile): cint		358
-nim	formatCheck	sndfile/api.html#formatCheck,ptr.SFInfo	proc formatCheck(info: ptr SFInfo): SFBool		360
-nim	seek	sndfile/api.html#seek,ptr.SndFile,SFCount,SFSeek	proc seek(sndfile: ptr SndFile; frames: SFCount; whence: SFSeek): SFCount		362
-nim	command	sndfile/api.html#command,ptr.SndFile,SFCommand,pointer,cint	proc command(sndfile: ptr SndFile; cmd: SFCommand; data: pointer; datasize: cint): cint		364
-nim	error	sndfile/api.html#error,ptr.SndFile	proc error(sndfile: ptr SndFile): cint		366
-nim	errorNumber	sndfile/api.html#errorNumber,int	proc errorNumber(errnum: int): cstring		367
-nim	strError	sndfile/api.html#strError,ptr.SndFile	proc strError(sndfile: ptr SndFile): cstring		368
-nim	setString	sndfile/api.html#setString,ptr.SndFile,SFStrType,cstring	proc setString(sndfile: ptr SndFile; str_type: SFStrType; str: cstring): cint		370
-nim	getString	sndfile/api.html#getString,ptr.SndFile,SFStrType	proc getString(sndfile: ptr SndFile; str_type: SFStrType): cstring		371
-nim	currentByterate	sndfile/api.html#currentByterate,ptr.SndFile	proc currentByterate(sndfile: ptr SndFile): cint		373
-nim	readShort	sndfile/api.html#readShort,ptr.SndFile,ptr.cshort,SFCount	proc readShort(sndfile: ptr SndFile; buffer_ptr: ptr cshort; items: SFCount): SFCount		375
-nim	readInt	sndfile/api.html#readInt,ptr.SndFile,ptr.cint,SFCount	proc readInt(sndfile: ptr SndFile; buffer_ptr: ptr cint; items: SFCount): SFCount		376
-nim	readFloat	sndfile/api.html#readFloat,ptr.SndFile,ptr.cfloat,SFCount	proc readFloat(sndfile: ptr SndFile; buffer_ptr: ptr cfloat; items: SFCount): SFCount		377
-nim	readDouble	sndfile/api.html#readDouble,ptr.SndFile,ptr.cdouble,SFCount	proc readDouble(sndfile: ptr SndFile; buffer_ptr: ptr cdouble; items: SFCount): SFCount		378
-nim	readFShort	sndfile/api.html#readFShort,ptr.SndFile,ptr.cshort,SFCount	proc readFShort(sndfile: ptr SndFile; buffer_ptr: ptr cshort; frames: SFCount): SFCount		380
-nim	readFInt	sndfile/api.html#readFInt,ptr.SndFile,ptr.cint,SFCount	proc readFInt(sndfile: ptr SndFile; buffer_ptr: ptr cint; frames: SFCount): SFCount		381
-nim	readFFloat	sndfile/api.html#readFFloat,ptr.SndFile,ptr.cfloat,SFCount	proc readFFloat(sndfile: ptr SndFile; buffer_ptr: ptr cfloat; frames: SFCount): SFCount		382
-nim	readFDouble	sndfile/api.html#readFDouble,ptr.SndFile,ptr.cdouble,SFCount	proc readFDouble(sndfile: ptr SndFile; buffer_ptr: ptr cdouble; frames: SFCount): SFCount		383
-nim	writeShort	sndfile/api.html#writeShort,ptr.SndFile,ptr.cshort,SFCount	proc writeShort(sndfile: ptr SndFile; buffer_ptr: ptr cshort; items: SFCount): SFCount		385
-nim	writeInt	sndfile/api.html#writeInt,ptr.SndFile,ptr.cint,SFCount	proc writeInt(sndfile: ptr SndFile; buffer_ptr: ptr cint; items: SFCount): SFCount		386
-nim	writeFloat	sndfile/api.html#writeFloat,ptr.SndFile,ptr.cfloat,SFCount	proc writeFloat(sndfile: ptr SndFile; buffer_ptr: ptr cfloat; items: SFCount): SFCount		387
-nim	writeDouble	sndfile/api.html#writeDouble,ptr.SndFile,ptr.cdouble,SFCount	proc writeDouble(sndfile: ptr SndFile; buffer_ptr: ptr cdouble; items: SFCount): SFCount		388
-nim	writeFShort	sndfile/api.html#writeFShort,ptr.SndFile,ptr.cshort,SFCount	proc writeFShort(sndfile: ptr SndFile; buffer_ptr: ptr cshort; frames: SFCount): SFCount		390
-nim	writeFInt	sndfile/api.html#writeFInt,ptr.SndFile,ptr.cint,SFCount	proc writeFInt(sndfile: ptr SndFile; buffer_ptr: ptr cint; frames: SFCount): SFCount		391
-nim	writeFFloat	sndfile/api.html#writeFFloat,ptr.SndFile,ptr.cfloat,SFCount	proc writeFFloat(sndfile: ptr SndFile; buffer_ptr: ptr cfloat; frames: SFCount): SFCount		392
-nim	writeFDouble	sndfile/api.html#writeFDouble,ptr.SndFile,ptr.cdouble,SFCount	proc writeFDouble(sndfile: ptr SndFile; buffer_ptr: ptr cdouble; frames: SFCount): SFCount		393
-nim	writeSync	sndfile/api.html#writeSync,ptr.SndFile	proc writeSync(sndfile: ptr SndFile)		395
+nim	SFLoopInfo	sndfile/api.html#SFLoopInfo	object SFLoopInfo		300
+nim	SFBroadcastInfo	sndfile/api.html#SFBroadcastInfo	object SFBroadcastInfo		309
+nim	SFCartTimer	sndfile/api.html#SFCartTimer	object SFCartTimer		328
+nim	SFCartInfo	sndfile/api.html#SFCartInfo	object SFCartInfo		332
+nim	versionString	sndfile/api.html#versionString	proc versionString(): cstring		356
+nim	open	sndfile/api.html#open,cstring,SFMode,ptr.SFInfo	proc open(path: cstring; mode: SFMode; sfinfo: ptr SFInfo): ptr SndFile		358
+nim	close	sndfile/api.html#close,ptr.SndFile	proc close(sndfile: ptr SndFile): cint		359
+nim	formatCheck	sndfile/api.html#formatCheck,ptr.SFInfo	proc formatCheck(info: ptr SFInfo): SFBool		361
+nim	seek	sndfile/api.html#seek,ptr.SndFile,SFCount,SFSeek	proc seek(sndfile: ptr SndFile; frames: SFCount; whence: SFSeek): SFCount		363
+nim	command	sndfile/api.html#command,ptr.SndFile,SFCommand,pointer,cint	proc command(sndfile: ptr SndFile; cmd: SFCommand; data: pointer; datasize: cint): cint		365
+nim	error	sndfile/api.html#error,ptr.SndFile	proc error(sndfile: ptr SndFile): cint		367
+nim	errorNumber	sndfile/api.html#errorNumber,int	proc errorNumber(errnum: int): cstring		368
+nim	strError	sndfile/api.html#strError,ptr.SndFile	proc strError(sndfile: ptr SndFile): cstring		369
+nim	setString	sndfile/api.html#setString,ptr.SndFile,SFStrType,cstring	proc setString(sndfile: ptr SndFile; str_type: SFStrType; str: cstring): cint		371
+nim	getString	sndfile/api.html#getString,ptr.SndFile,SFStrType	proc getString(sndfile: ptr SndFile; str_type: SFStrType): cstring		372
+nim	currentByterate	sndfile/api.html#currentByterate,ptr.SndFile	proc currentByterate(sndfile: ptr SndFile): cint		374
+nim	readShort	sndfile/api.html#readShort,ptr.SndFile,ptr.cshort,SFCount	proc readShort(sndfile: ptr SndFile; buffer_ptr: ptr cshort; items: SFCount): SFCount		376
+nim	readInt	sndfile/api.html#readInt,ptr.SndFile,ptr.cint,SFCount	proc readInt(sndfile: ptr SndFile; buffer_ptr: ptr cint; items: SFCount): SFCount		377
+nim	readFloat	sndfile/api.html#readFloat,ptr.SndFile,ptr.cfloat,SFCount	proc readFloat(sndfile: ptr SndFile; buffer_ptr: ptr cfloat; items: SFCount): SFCount		378
+nim	readDouble	sndfile/api.html#readDouble,ptr.SndFile,ptr.cdouble,SFCount	proc readDouble(sndfile: ptr SndFile; buffer_ptr: ptr cdouble; items: SFCount): SFCount		379
+nim	readFShort	sndfile/api.html#readFShort,ptr.SndFile,ptr.cshort,SFCount	proc readFShort(sndfile: ptr SndFile; buffer_ptr: ptr cshort; frames: SFCount): SFCount		381
+nim	readFInt	sndfile/api.html#readFInt,ptr.SndFile,ptr.cint,SFCount	proc readFInt(sndfile: ptr SndFile; buffer_ptr: ptr cint; frames: SFCount): SFCount		382
+nim	readFFloat	sndfile/api.html#readFFloat,ptr.SndFile,ptr.cfloat,SFCount	proc readFFloat(sndfile: ptr SndFile; buffer_ptr: ptr cfloat; frames: SFCount): SFCount		383
+nim	readFDouble	sndfile/api.html#readFDouble,ptr.SndFile,ptr.cdouble,SFCount	proc readFDouble(sndfile: ptr SndFile; buffer_ptr: ptr cdouble; frames: SFCount): SFCount		384
+nim	writeShort	sndfile/api.html#writeShort,ptr.SndFile,ptr.cshort,SFCount	proc writeShort(sndfile: ptr SndFile; buffer_ptr: ptr cshort; items: SFCount): SFCount		386
+nim	writeInt	sndfile/api.html#writeInt,ptr.SndFile,ptr.cint,SFCount	proc writeInt(sndfile: ptr SndFile; buffer_ptr: ptr cint; items: SFCount): SFCount		387
+nim	writeFloat	sndfile/api.html#writeFloat,ptr.SndFile,ptr.cfloat,SFCount	proc writeFloat(sndfile: ptr SndFile; buffer_ptr: ptr cfloat; items: SFCount): SFCount		388
+nim	writeDouble	sndfile/api.html#writeDouble,ptr.SndFile,ptr.cdouble,SFCount	proc writeDouble(sndfile: ptr SndFile; buffer_ptr: ptr cdouble; items: SFCount): SFCount		389
+nim	writeFShort	sndfile/api.html#writeFShort,ptr.SndFile,ptr.cshort,SFCount	proc writeFShort(sndfile: ptr SndFile; buffer_ptr: ptr cshort; frames: SFCount): SFCount		391
+nim	writeFInt	sndfile/api.html#writeFInt,ptr.SndFile,ptr.cint,SFCount	proc writeFInt(sndfile: ptr SndFile; buffer_ptr: ptr cint; frames: SFCount): SFCount		392
+nim	writeFFloat	sndfile/api.html#writeFFloat,ptr.SndFile,ptr.cfloat,SFCount	proc writeFFloat(sndfile: ptr SndFile; buffer_ptr: ptr cfloat; frames: SFCount): SFCount		393
+nim	writeFDouble	sndfile/api.html#writeFDouble,ptr.SndFile,ptr.cdouble,SFCount	proc writeFDouble(sndfile: ptr SndFile; buffer_ptr: ptr cdouble; frames: SFCount): SFCount		394
+nim	writeSync	sndfile/api.html#writeSync,ptr.SndFile	proc writeSync(sndfile: ptr SndFile)		396
