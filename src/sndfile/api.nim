@@ -352,6 +352,14 @@ type
     tagTextSize*: uint32
     tagText*: array[maxTagTextSize, char]
 
+  SFChunkInfo* = object
+    id*: array[64, char]
+    idSize*: cuint
+    dataLen*: cuint
+    data*: ptr UncheckedArray[byte]
+
+  SFChunkIterator* = distinct object
+
 
 proc versionString*(): cstring {.libsnd, importc: "sf_version_string".}
 
@@ -394,3 +402,9 @@ proc writeFFloat*(sndfile: ptr SndFile, buffer_ptr: ptr cfloat; frames: SFCount)
 proc writeFDouble*(sndfile: ptr SndFile, buffer_ptr: ptr cdouble; frames: SFCount): SFCount {.libsnd, importc: "sf_writef_double".}
 
 proc writeSync*(sndfile: ptr SndFile) {.libsnd, importc: "sf_write_sync".}
+
+proc setChunk*(sndfile: ptr SndFile, chunk_info: ptr SFChunkInfo): SFErr {.libsnd, importc: "sf_set_chunk".}
+proc getChunkIterator*(sndfile: ptr SndFile, chunk_info: ptr SFChunkInfo): ptr SFChunkIterator {.libsnd, importc: "sf_get_chunk_iterator".}
+proc nextChunkIterator*(it: ptr SFChunkIterator): ptr SFChunkIterator {.libsnd, importc: "sf_next_chunk_iterator".}
+proc getChunkSize*(it: ptr SFChunkIterator, chunk_info: ptr SFChunkInfo): SFErr {.libsnd, importc: "sf_get_chunk_size".}
+proc getChunkData*(it: ptr SFChunkIterator, chunk_info: ptr SFChunkInfo): SFErr {.libsnd, importc: "sf_get_chunk_data".}
