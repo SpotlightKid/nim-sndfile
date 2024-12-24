@@ -1,0 +1,4 @@
+nimTitle	chunks	sndfile/chunks.html	module src/sndfile/chunks		0
+nim	SmplLoop	sndfile/chunks.html#SmplLoop	object SmplLoop		6
+nim	SmplChunk	sndfile/chunks.html#SmplChunk	object SmplChunk		18
+nim	chunks	sndfile/chunks.html#chunks.i,ptr.SndFile,string	iterator chunks(sndfile: ptr SndFile; chunk_id: string): seq[byte]		36

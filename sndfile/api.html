@@ -111,6 +111,12 @@
   TOP_FRONT_RIGHT, TOP_FRONT_CENTER, TOP_REAR_LEFT, TOP_REAR_RIGHT,
   TOP_REAR_CENTER, AMBISONIC_B_W, AMBISONIC_B_X, AMBISONIC_B_Y, AMBISONIC_B_Z,
   MAX">SFChannelMap</a></li>
+<li><a class="reference" href="#SFChunkInfo" title="SFChunkInfo = object
+  id*: array[64, char]
+  idSize*: cuint
+  dataLen*: cuint
+  data*: ptr UncheckedArray[byte]">SFChunkInfo</a></li>
+<li><a class="reference" href="#SFChunkIterator" title="SFChunkIterator = distinct object">SFChunkIterator</a></li>
 <li><a class="reference" href="#SFCommand" title="SFCommand {.pure, size: 4.} = enum
   GET_LIB_VERSION = 4096, GET_LOG_INFO = 4097, GET_CURRENT_SF_INFO = 4098,
   GET_NORM_DOUBLE = 4112, GET_NORM_FLOAT = 4113, SET_NORM_DOUBLE = 4114,
@@ -245,8 +251,24 @@
   <li><a class="reference" href="#formatCheck%2Cptr.SFInfo" title="formatCheck(info: ptr SFInfo): SFBool">formatCheck(info: ptr SFInfo): SFBool</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">getChunkData
+  <li><a class="reference" href="#getChunkData%2Cptr.SFChunkIterator%2Cptr.SFChunkInfo" title="getChunkData(it: ptr SFChunkIterator; chunk_info: ptr SFChunkInfo): SFErr">getChunkData(it: ptr SFChunkIterator; chunk_info: ptr SFChunkInfo): SFErr</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">getChunkIterator
+  <li><a class="reference" href="#getChunkIterator%2Cptr.SndFile%2Cptr.SFChunkInfo" title="getChunkIterator(sndfile: ptr SndFile; chunk_info: ptr SFChunkInfo): ptr SFChunkIterator">getChunkIterator(sndfile: ptr SndFile; chunk_info: ptr SFChunkInfo): ptr SFChunkIterator</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">getChunkSize
+  <li><a class="reference" href="#getChunkSize%2Cptr.SFChunkIterator%2Cptr.SFChunkInfo" title="getChunkSize(it: ptr SFChunkIterator; chunk_info: ptr SFChunkInfo): SFErr">getChunkSize(it: ptr SFChunkIterator; chunk_info: ptr SFChunkInfo): SFErr</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">getString
   <li><a class="reference" href="#getString%2Cptr.SndFile%2CSFStrType" title="getString(sndfile: ptr SndFile; str_type: SFStrType): cstring">getString(sndfile: ptr SndFile; str_type: SFStrType): cstring</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">nextChunkIterator
+  <li><a class="reference" href="#nextChunkIterator%2Cptr.SFChunkIterator" title="nextChunkIterator(it: ptr SFChunkIterator): ptr SFChunkIterator">nextChunkIterator(it: ptr SFChunkIterator): ptr SFChunkIterator</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">open
@@ -287,6 +309,10 @@
 </ul>
 <ul class="simple nested-toc-section">seek
   <li><a class="reference" href="#seek%2Cptr.SndFile%2CSFCount%2CSFSeek" title="seek(sndfile: ptr SndFile; frames: SFCount; whence: SFSeek): SFCount">seek(sndfile: ptr SndFile; frames: SFCount; whence: SFSeek): SFCount</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">setChunk
+  <li><a class="reference" href="#setChunk%2Cptr.SndFile%2Cptr.SFChunkInfo" title="setChunk(sndfile: ptr SndFile; chunk_info: ptr SFChunkInfo): SFErr">setChunk(sndfile: ptr SndFile; chunk_info: ptr SFChunkInfo): SFErr</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">setString
@@ -471,6 +497,30 @@
     
     <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L211" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
 <a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L211" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+<div id="SFChunkInfo">
+  <dt><pre><a href="api.html#SFChunkInfo"><span class="Identifier">SFChunkInfo</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
+  <span class="Identifier">id</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">array</span><span class="Other">[</span><span class="DecNumber">64</span><span class="Other">,</span> <span class="Identifier">char</span><span class="Other">]</span>
+  <span class="Identifier">idSize</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cuint</span>
+  <span class="Identifier">dataLen</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cuint</span>
+  <span class="Identifier">data</span><span class="Operator">*</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">UncheckedArray</span><span class="Other">[</span><span class="Identifier">byte</span><span class="Other">]</span></pre></dt>
+  <dd>
+    
+    
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L355" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L355" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+<div id="SFChunkIterator">
+  <dt><pre><a href="api.html#SFChunkIterator"><span class="Identifier">SFChunkIterator</span></a> <span class="Other">=</span> <span class="Keyword">distinct</span> <span class="Keyword">object</span></pre></dt>
+  <dd>
+    
+    
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L361" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L361" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -751,8 +801,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L359" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L359" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L367" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L367" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -766,8 +816,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L365" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L365" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L373" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L373" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -780,8 +830,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L374" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L374" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L382" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L382" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -794,8 +844,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L367" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L367" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L375" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L375" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -808,8 +858,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L368" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L368" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L376" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L376" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -822,8 +872,53 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L361" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L361" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L369" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L369" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
+<div id="getChunkData-procs-all">
+  <div id="getChunkData,ptr.SFChunkIterator,ptr.SFChunkInfo">
+  <dt><pre><span class="Keyword">proc</span> <a href="#getChunkData%2Cptr.SFChunkIterator%2Cptr.SFChunkInfo"><span class="Identifier">getChunkData</span></a><span class="Other">(</span><span class="Identifier">it</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SFChunkIterator"><span class="Identifier">SFChunkIterator</span></a><span class="Other">;</span> <span class="Identifier">chunk_info</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SFChunkInfo"><span class="Identifier">SFChunkInfo</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFErr"><span class="Identifier">SFErr</span></a> {.
+    <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_get_chunk_data&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L410" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L410" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
+<div id="getChunkIterator-procs-all">
+  <div id="getChunkIterator,ptr.SndFile,ptr.SFChunkInfo">
+  <dt><pre><span class="Keyword">proc</span> <a href="#getChunkIterator%2Cptr.SndFile%2Cptr.SFChunkInfo"><span class="Identifier">getChunkIterator</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">chunk_info</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SFChunkInfo"><span class="Identifier">SFChunkInfo</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SFChunkIterator"><span class="Identifier">SFChunkIterator</span></a> {.
+    <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_get_chunk_iterator&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L407" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L407" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
+<div id="getChunkSize-procs-all">
+  <div id="getChunkSize,ptr.SFChunkIterator,ptr.SFChunkInfo">
+  <dt><pre><span class="Keyword">proc</span> <a href="#getChunkSize%2Cptr.SFChunkIterator%2Cptr.SFChunkInfo"><span class="Identifier">getChunkSize</span></a><span class="Other">(</span><span class="Identifier">it</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SFChunkIterator"><span class="Identifier">SFChunkIterator</span></a><span class="Other">;</span> <span class="Identifier">chunk_info</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SFChunkInfo"><span class="Identifier">SFChunkInfo</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFErr"><span class="Identifier">SFErr</span></a> {.
+    <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_get_chunk_size&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L409" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L409" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -836,8 +931,23 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L372" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L372" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L380" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L380" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
+<div id="nextChunkIterator-procs-all">
+  <div id="nextChunkIterator,ptr.SFChunkIterator">
+  <dt><pre><span class="Keyword">proc</span> <a href="#nextChunkIterator%2Cptr.SFChunkIterator"><span class="Identifier">nextChunkIterator</span></a><span class="Other">(</span><span class="Identifier">it</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SFChunkIterator"><span class="Identifier">SFChunkIterator</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SFChunkIterator"><span class="Identifier">SFChunkIterator</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span>
+    <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_next_chunk_iterator&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L408" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L408" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -850,8 +960,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L358" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L358" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L366" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L366" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -865,8 +975,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L379" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L379" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L387" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L387" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -880,8 +990,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L384" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L384" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L392" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L392" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -895,8 +1005,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L383" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L383" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L391" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L391" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -910,8 +1020,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L382" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L382" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L390" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L390" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -925,8 +1035,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L378" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L378" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L386" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L386" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -940,8 +1050,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L381" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L381" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L389" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L389" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -955,8 +1065,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L377" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L377" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L385" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L385" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -970,8 +1080,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L376" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L376" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L384" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L384" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -984,8 +1094,22 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L363" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L363" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L371" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L371" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
+<div id="setChunk-procs-all">
+  <div id="setChunk,ptr.SndFile,ptr.SFChunkInfo">
+  <dt><pre><span class="Keyword">proc</span> <a href="#setChunk%2Cptr.SndFile%2Cptr.SFChunkInfo"><span class="Identifier">setChunk</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">chunk_info</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SFChunkInfo"><span class="Identifier">SFChunkInfo</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFErr"><span class="Identifier">SFErr</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span>
+    <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_set_chunk&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L406" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L406" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -999,8 +1123,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L371" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L371" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L379" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L379" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1013,8 +1137,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L369" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L369" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L377" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L377" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1028,8 +1152,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L356" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L356" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L364" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L364" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1043,8 +1167,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L389" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L389" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L397" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L397" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1058,8 +1182,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L394" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L394" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L402" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L402" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1073,8 +1197,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L393" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L393" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L401" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L401" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1088,8 +1212,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L392" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L392" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L400" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L400" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1103,8 +1227,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L388" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L388" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L396" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L396" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1118,8 +1242,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L391" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L391" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L399" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L399" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1133,8 +1257,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L387" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L387" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L395" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L395" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1148,8 +1272,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L386" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L386" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L394" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L394" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1163,8 +1287,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L396" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L396" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L404" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L404" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1180,7 +1304,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2024-12-23 11:34:55 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2024-12-24 08:52:03 UTC</small>
       </div>
     </div>
   </div>

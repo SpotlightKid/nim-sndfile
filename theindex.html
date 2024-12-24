@@ -25,8 +25,12 @@
   <div class="document" id="documentId">
     <div class="container">
       <h1 class="title">Index</h1>
-      Modules: <a href="sndfile.html">sndfile</a>, <a href="sndfile/api.html">sndfile/api</a>.<br/><p /><h2>API symbols</h2>
-<dl><dt><a name="close" href="#close"><span>close:</span></a></dt><dd><ul class="simple">
+      Modules: <a href="sndfile.html">sndfile</a>, <a href="sndfile/api.html">sndfile/api</a>, <a href="sndfile/chunks.html">sndfile/chunks</a>.<br/><p /><h2>API symbols</h2>
+<dl><dt><a name="chunks" href="#chunks"><span>chunks:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="chunks: iterator chunks(sndfile: ptr SndFile; chunk_id: string): seq[byte]" href="sndfile/chunks.html#chunks.i%2Cptr.SndFile%2Cstring">chunks: iterator chunks(sndfile: ptr SndFile; chunk_id: string): seq[byte]</a></li>
+          </ul></dd>
+<dt><a name="close" href="#close"><span>close:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="api: proc close(sndfile: ptr SndFile): cint" href="sndfile/api.html#close%2Cptr.SndFile">api: proc close(sndfile: ptr SndFile): cint</a></li>
           </ul></dd>
@@ -50,9 +54,25 @@
 <li><a class="reference external"
           data-doc-search-tag="api: proc formatCheck(info: ptr SFInfo): SFBool" href="sndfile/api.html#formatCheck%2Cptr.SFInfo">api: proc formatCheck(info: ptr SFInfo): SFBool</a></li>
           </ul></dd>
+<dt><a name="getChunkData" href="#getChunkData"><span>getChunkData:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="api: proc getChunkData(it: ptr SFChunkIterator; chunk_info: ptr SFChunkInfo): SFErr" href="sndfile/api.html#getChunkData%2Cptr.SFChunkIterator%2Cptr.SFChunkInfo">api: proc getChunkData(it: ptr SFChunkIterator; chunk_info: ptr SFChunkInfo): SFErr</a></li>
+          </ul></dd>
+<dt><a name="getChunkIterator" href="#getChunkIterator"><span>getChunkIterator:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="api: proc getChunkIterator(sndfile: ptr SndFile; chunk_info: ptr SFChunkInfo): ptr SFChunkIterator" href="sndfile/api.html#getChunkIterator%2Cptr.SndFile%2Cptr.SFChunkInfo">api: proc getChunkIterator(sndfile: ptr SndFile; chunk_info: ptr SFChunkInfo): ptr SFChunkIterator</a></li>
+          </ul></dd>
+<dt><a name="getChunkSize" href="#getChunkSize"><span>getChunkSize:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="api: proc getChunkSize(it: ptr SFChunkIterator; chunk_info: ptr SFChunkInfo): SFErr" href="sndfile/api.html#getChunkSize%2Cptr.SFChunkIterator%2Cptr.SFChunkInfo">api: proc getChunkSize(it: ptr SFChunkIterator; chunk_info: ptr SFChunkInfo): SFErr</a></li>
+          </ul></dd>
 <dt><a name="getString" href="#getString"><span>getString:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="api: proc getString(sndfile: ptr SndFile; str_type: SFStrType): cstring" href="sndfile/api.html#getString%2Cptr.SndFile%2CSFStrType">api: proc getString(sndfile: ptr SndFile; str_type: SFStrType): cstring</a></li>
+          </ul></dd>
+<dt><a name="nextChunkIterator" href="#nextChunkIterator"><span>nextChunkIterator:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="api: proc nextChunkIterator(it: ptr SFChunkIterator): ptr SFChunkIterator" href="sndfile/api.html#nextChunkIterator%2Cptr.SFChunkIterator">api: proc nextChunkIterator(it: ptr SFChunkIterator): ptr SFChunkIterator</a></li>
           </ul></dd>
 <dt><a name="open" href="#open"><span>open:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -94,6 +114,10 @@
 <li><a class="reference external"
           data-doc-search-tag="api: proc seek(sndfile: ptr SndFile; frames: SFCount; whence: SFSeek): SFCount" href="sndfile/api.html#seek%2Cptr.SndFile%2CSFCount%2CSFSeek">api: proc seek(sndfile: ptr SndFile; frames: SFCount; whence: SFSeek): SFCount</a></li>
           </ul></dd>
+<dt><a name="setChunk" href="#setChunk"><span>setChunk:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="api: proc setChunk(sndfile: ptr SndFile; chunk_info: ptr SFChunkInfo): SFErr" href="sndfile/api.html#setChunk%2Cptr.SndFile%2Cptr.SFChunkInfo">api: proc setChunk(sndfile: ptr SndFile; chunk_info: ptr SFChunkInfo): SFErr</a></li>
+          </ul></dd>
 <dt><a name="setString" href="#setString"><span>setString:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="api: proc setString(sndfile: ptr SndFile; str_type: SFStrType; str: cstring): cint" href="sndfile/api.html#setString%2Cptr.SndFile%2CSFStrType%2Ccstring">api: proc setString(sndfile: ptr SndFile; str_type: SFStrType; str: cstring): cint</a></li>
@@ -125,6 +149,14 @@
 <dt><a name="SFChannelMap" href="#SFChannelMap"><span>SFChannelMap:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="api: enum SFChannelMap" href="sndfile/api.html#SFChannelMap">api: enum SFChannelMap</a></li>
+          </ul></dd>
+<dt><a name="SFChunkInfo" href="#SFChunkInfo"><span>SFChunkInfo:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="api: object SFChunkInfo" href="sndfile/api.html#SFChunkInfo">api: object SFChunkInfo</a></li>
+          </ul></dd>
+<dt><a name="SFChunkIterator" href="#SFChunkIterator"><span>SFChunkIterator:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="api: type SFChunkIterator" href="sndfile/api.html#SFChunkIterator">api: type SFChunkIterator</a></li>
           </ul></dd>
 <dt><a name="SFCommand" href="#SFCommand"><span>SFCommand:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -194,6 +226,14 @@
 <li><a class="reference external"
           data-doc-search-tag="api: enum SFStrType" href="sndfile/api.html#SFStrType">api: enum SFStrType</a></li>
           </ul></dd>
+<dt><a name="SmplChunk" href="#SmplChunk"><span>SmplChunk:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="chunks: object SmplChunk" href="sndfile/chunks.html#SmplChunk">chunks: object SmplChunk</a></li>
+          </ul></dd>
+<dt><a name="SmplLoop" href="#SmplLoop"><span>SmplLoop:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="chunks: object SmplLoop" href="sndfile/chunks.html#SmplLoop">chunks: object SmplLoop</a></li>
+          </ul></dd>
 <dt><a name="SndFile" href="#SndFile"><span>SndFile:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="api: type SndFile" href="sndfile/api.html#SndFile">api: type SndFile</a></li>
@@ -246,7 +286,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2024-12-23 11:34:55 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2024-12-24 08:52:03 UTC</small>
       </div>
     </div>
   </div>
