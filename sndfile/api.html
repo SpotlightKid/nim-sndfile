@@ -252,19 +252,19 @@
 
 </ul>
 <ul class="simple nested-toc-section">getChunkData
-  <li><a class="reference" href="#getChunkData%2Cptr.SFChunkIterator%2Cptr.SFChunkInfo" title="getChunkData(it: ptr SFChunkIterator; chunk_info: ptr SFChunkInfo): SFErr">getChunkData(it: ptr SFChunkIterator; chunk_info: ptr SFChunkInfo): SFErr</a></li>
+  <li><a class="reference" href="#getChunkData%2Cptr.SFChunkIterator%2Cptr.SFChunkInfo" title="getChunkData(it: ptr SFChunkIterator; chunkInfo: ptr SFChunkInfo): SFErr">getChunkData(it: ptr SFChunkIterator; chunkInfo: ptr SFChunkInfo): SFErr</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">getChunkIterator
-  <li><a class="reference" href="#getChunkIterator%2Cptr.SndFile%2Cptr.SFChunkInfo" title="getChunkIterator(sndfile: ptr SndFile; chunk_info: ptr SFChunkInfo): ptr SFChunkIterator">getChunkIterator(sndfile: ptr SndFile; chunk_info: ptr SFChunkInfo): ptr SFChunkIterator</a></li>
+  <li><a class="reference" href="#getChunkIterator%2Cptr.SndFile%2Cptr.SFChunkInfo" title="getChunkIterator(sndfile: ptr SndFile; chunkInfo: ptr SFChunkInfo): ptr SFChunkIterator">getChunkIterator(sndfile: ptr SndFile; chunkInfo: ptr SFChunkInfo): ptr SFChunkIterator</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">getChunkSize
-  <li><a class="reference" href="#getChunkSize%2Cptr.SFChunkIterator%2Cptr.SFChunkInfo" title="getChunkSize(it: ptr SFChunkIterator; chunk_info: ptr SFChunkInfo): SFErr">getChunkSize(it: ptr SFChunkIterator; chunk_info: ptr SFChunkInfo): SFErr</a></li>
+  <li><a class="reference" href="#getChunkSize%2Cptr.SFChunkIterator%2Cptr.SFChunkInfo" title="getChunkSize(it: ptr SFChunkIterator; chunkInfo: ptr SFChunkInfo): SFErr">getChunkSize(it: ptr SFChunkIterator; chunkInfo: ptr SFChunkInfo): SFErr</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">getString
-  <li><a class="reference" href="#getString%2Cptr.SndFile%2CSFStrType" title="getString(sndfile: ptr SndFile; str_type: SFStrType): cstring">getString(sndfile: ptr SndFile; str_type: SFStrType): cstring</a></li>
+  <li><a class="reference" href="#getString%2Cptr.SndFile%2CSFStrType" title="getString(sndfile: ptr SndFile; strType: SFStrType): cstring">getString(sndfile: ptr SndFile; strType: SFStrType): cstring</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">nextChunkIterator
@@ -272,39 +272,43 @@
 
 </ul>
 <ul class="simple nested-toc-section">open
-  <li><a class="reference" href="#open%2Ccstring%2CSFMode%2Cptr.SFInfo" title="open(path: cstring; mode: SFMode; sfinfo: ptr SFInfo): ptr SndFile">open(path: cstring; mode: SFMode; sfinfo: ptr SFInfo): ptr SndFile</a></li>
+  <li><a class="reference" href="#open%2Ccstring%2CSFMode%2Cptr.SFInfo" title="open(path: cstring; mode: SFMode; sfInfo: ptr SFInfo): ptr SndFile">open(path: cstring; mode: SFMode; sfInfo: ptr SFInfo): ptr SndFile</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">readDouble
-  <li><a class="reference" href="#readDouble%2Cptr.SndFile%2Cptr.cdouble%2CSFCount" title="readDouble(sndfile: ptr SndFile; buffer_ptr: ptr cdouble; items: SFCount): SFCount">readDouble(sndfile: ptr SndFile; buffer_ptr: ptr cdouble; items: SFCount): SFCount</a></li>
+  <li><a class="reference" href="#readDouble%2Cptr.SndFile%2Cptr.cdouble%2CSFCount" title="readDouble(sndfile: ptr SndFile; bufferPtr: ptr cdouble; items: SFCount): SFCount">readDouble(sndfile: ptr SndFile; bufferPtr: ptr cdouble; items: SFCount): SFCount</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">readFDouble
-  <li><a class="reference" href="#readFDouble%2Cptr.SndFile%2Cptr.cdouble%2CSFCount" title="readFDouble(sndfile: ptr SndFile; buffer_ptr: ptr cdouble; frames: SFCount): SFCount">readFDouble(sndfile: ptr SndFile; buffer_ptr: ptr cdouble; frames: SFCount): SFCount</a></li>
+  <li><a class="reference" href="#readFDouble%2Cptr.SndFile%2Cptr.cdouble%2CSFCount" title="readFDouble(sndfile: ptr SndFile; bufferPtr: ptr cdouble; frames: SFCount): SFCount">readFDouble(sndfile: ptr SndFile; bufferPtr: ptr cdouble; frames: SFCount): SFCount</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">readFFloat
-  <li><a class="reference" href="#readFFloat%2Cptr.SndFile%2Cptr.cfloat%2CSFCount" title="readFFloat(sndfile: ptr SndFile; buffer_ptr: ptr cfloat; frames: SFCount): SFCount">readFFloat(sndfile: ptr SndFile; buffer_ptr: ptr cfloat; frames: SFCount): SFCount</a></li>
+  <li><a class="reference" href="#readFFloat%2Cptr.SndFile%2Cptr.cfloat%2CSFCount" title="readFFloat(sndfile: ptr SndFile; bufferPtr: ptr cfloat; frames: SFCount): SFCount">readFFloat(sndfile: ptr SndFile; bufferPtr: ptr cfloat; frames: SFCount): SFCount</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">readFInt
-  <li><a class="reference" href="#readFInt%2Cptr.SndFile%2Cptr.cint%2CSFCount" title="readFInt(sndfile: ptr SndFile; buffer_ptr: ptr cint; frames: SFCount): SFCount">readFInt(sndfile: ptr SndFile; buffer_ptr: ptr cint; frames: SFCount): SFCount</a></li>
+  <li><a class="reference" href="#readFInt%2Cptr.SndFile%2Cptr.cint%2CSFCount" title="readFInt(sndfile: ptr SndFile; bufferPtr: ptr cint; frames: SFCount): SFCount">readFInt(sndfile: ptr SndFile; bufferPtr: ptr cint; frames: SFCount): SFCount</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">readFloat
-  <li><a class="reference" href="#readFloat%2Cptr.SndFile%2Cptr.cfloat%2CSFCount" title="readFloat(sndfile: ptr SndFile; buffer_ptr: ptr cfloat; items: SFCount): SFCount">readFloat(sndfile: ptr SndFile; buffer_ptr: ptr cfloat; items: SFCount): SFCount</a></li>
+  <li><a class="reference" href="#readFloat%2Cptr.SndFile%2Cptr.cfloat%2CSFCount" title="readFloat(sndfile: ptr SndFile; bufferPtr: ptr cfloat; items: SFCount): SFCount">readFloat(sndfile: ptr SndFile; bufferPtr: ptr cfloat; items: SFCount): SFCount</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">readFShort
-  <li><a class="reference" href="#readFShort%2Cptr.SndFile%2Cptr.cshort%2CSFCount" title="readFShort(sndfile: ptr SndFile; buffer_ptr: ptr cshort; frames: SFCount): SFCount">readFShort(sndfile: ptr SndFile; buffer_ptr: ptr cshort; frames: SFCount): SFCount</a></li>
+  <li><a class="reference" href="#readFShort%2Cptr.SndFile%2Cptr.cshort%2CSFCount" title="readFShort(sndfile: ptr SndFile; bufferPtr: ptr cshort; frames: SFCount): SFCount">readFShort(sndfile: ptr SndFile; bufferPtr: ptr cshort; frames: SFCount): SFCount</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">readInt
-  <li><a class="reference" href="#readInt%2Cptr.SndFile%2Cptr.cint%2CSFCount" title="readInt(sndfile: ptr SndFile; buffer_ptr: ptr cint; items: SFCount): SFCount">readInt(sndfile: ptr SndFile; buffer_ptr: ptr cint; items: SFCount): SFCount</a></li>
+  <li><a class="reference" href="#readInt%2Cptr.SndFile%2Cptr.cint%2CSFCount" title="readInt(sndfile: ptr SndFile; bufferPtr: ptr cint; items: SFCount): SFCount">readInt(sndfile: ptr SndFile; bufferPtr: ptr cint; items: SFCount): SFCount</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">readRaw
+  <li><a class="reference" href="#readRaw%2Cptr.SndFile%2Cptr.byte%2CSFCount" title="readRaw(sndfile: ptr SndFile; bufferPtr: ptr byte; numBytes: SFCount): SFCount">readRaw(sndfile: ptr SndFile; bufferPtr: ptr byte; numBytes: SFCount): SFCount</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">readShort
-  <li><a class="reference" href="#readShort%2Cptr.SndFile%2Cptr.cshort%2CSFCount" title="readShort(sndfile: ptr SndFile; buffer_ptr: ptr cshort; items: SFCount): SFCount">readShort(sndfile: ptr SndFile; buffer_ptr: ptr cshort; items: SFCount): SFCount</a></li>
+  <li><a class="reference" href="#readShort%2Cptr.SndFile%2Cptr.cshort%2CSFCount" title="readShort(sndfile: ptr SndFile; bufferPtr: ptr cshort; items: SFCount): SFCount">readShort(sndfile: ptr SndFile; bufferPtr: ptr cshort; items: SFCount): SFCount</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">seek
@@ -312,11 +316,11 @@
 
 </ul>
 <ul class="simple nested-toc-section">setChunk
-  <li><a class="reference" href="#setChunk%2Cptr.SndFile%2Cptr.SFChunkInfo" title="setChunk(sndfile: ptr SndFile; chunk_info: ptr SFChunkInfo): SFErr">setChunk(sndfile: ptr SndFile; chunk_info: ptr SFChunkInfo): SFErr</a></li>
+  <li><a class="reference" href="#setChunk%2Cptr.SndFile%2Cptr.SFChunkInfo" title="setChunk(sndfile: ptr SndFile; chunkInfo: ptr SFChunkInfo): SFErr">setChunk(sndfile: ptr SndFile; chunkInfo: ptr SFChunkInfo): SFErr</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">setString
-  <li><a class="reference" href="#setString%2Cptr.SndFile%2CSFStrType%2Ccstring" title="setString(sndfile: ptr SndFile; str_type: SFStrType; str: cstring): cint">setString(sndfile: ptr SndFile; str_type: SFStrType; str: cstring): cint</a></li>
+  <li><a class="reference" href="#setString%2Cptr.SndFile%2CSFStrType%2Ccstring" title="setString(sndfile: ptr SndFile; strType: SFStrType; str: cstring): cint">setString(sndfile: ptr SndFile; strType: SFStrType; str: cstring): cint</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">strError
@@ -328,35 +332,39 @@
 
 </ul>
 <ul class="simple nested-toc-section">writeDouble
-  <li><a class="reference" href="#writeDouble%2Cptr.SndFile%2Cptr.cdouble%2CSFCount" title="writeDouble(sndfile: ptr SndFile; buffer_ptr: ptr cdouble; items: SFCount): SFCount">writeDouble(sndfile: ptr SndFile; buffer_ptr: ptr cdouble; items: SFCount): SFCount</a></li>
+  <li><a class="reference" href="#writeDouble%2Cptr.SndFile%2Cptr.cdouble%2CSFCount" title="writeDouble(sndfile: ptr SndFile; bufferPtr: ptr cdouble; items: SFCount): SFCount">writeDouble(sndfile: ptr SndFile; bufferPtr: ptr cdouble; items: SFCount): SFCount</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">writeFDouble
-  <li><a class="reference" href="#writeFDouble%2Cptr.SndFile%2Cptr.cdouble%2CSFCount" title="writeFDouble(sndfile: ptr SndFile; buffer_ptr: ptr cdouble; frames: SFCount): SFCount">writeFDouble(sndfile: ptr SndFile; buffer_ptr: ptr cdouble; frames: SFCount): SFCount</a></li>
+  <li><a class="reference" href="#writeFDouble%2Cptr.SndFile%2Cptr.cdouble%2CSFCount" title="writeFDouble(sndfile: ptr SndFile; bufferPtr: ptr cdouble; frames: SFCount): SFCount">writeFDouble(sndfile: ptr SndFile; bufferPtr: ptr cdouble; frames: SFCount): SFCount</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">writeFFloat
-  <li><a class="reference" href="#writeFFloat%2Cptr.SndFile%2Cptr.cfloat%2CSFCount" title="writeFFloat(sndfile: ptr SndFile; buffer_ptr: ptr cfloat; frames: SFCount): SFCount">writeFFloat(sndfile: ptr SndFile; buffer_ptr: ptr cfloat; frames: SFCount): SFCount</a></li>
+  <li><a class="reference" href="#writeFFloat%2Cptr.SndFile%2Cptr.cfloat%2CSFCount" title="writeFFloat(sndfile: ptr SndFile; bufferPtr: ptr cfloat; frames: SFCount): SFCount">writeFFloat(sndfile: ptr SndFile; bufferPtr: ptr cfloat; frames: SFCount): SFCount</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">writeFInt
-  <li><a class="reference" href="#writeFInt%2Cptr.SndFile%2Cptr.cint%2CSFCount" title="writeFInt(sndfile: ptr SndFile; buffer_ptr: ptr cint; frames: SFCount): SFCount">writeFInt(sndfile: ptr SndFile; buffer_ptr: ptr cint; frames: SFCount): SFCount</a></li>
+  <li><a class="reference" href="#writeFInt%2Cptr.SndFile%2Cptr.cint%2CSFCount" title="writeFInt(sndfile: ptr SndFile; bufferPtr: ptr cint; frames: SFCount): SFCount">writeFInt(sndfile: ptr SndFile; bufferPtr: ptr cint; frames: SFCount): SFCount</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">writeFloat
-  <li><a class="reference" href="#writeFloat%2Cptr.SndFile%2Cptr.cfloat%2CSFCount" title="writeFloat(sndfile: ptr SndFile; buffer_ptr: ptr cfloat; items: SFCount): SFCount">writeFloat(sndfile: ptr SndFile; buffer_ptr: ptr cfloat; items: SFCount): SFCount</a></li>
+  <li><a class="reference" href="#writeFloat%2Cptr.SndFile%2Cptr.cfloat%2CSFCount" title="writeFloat(sndfile: ptr SndFile; bufferPtr: ptr cfloat; items: SFCount): SFCount">writeFloat(sndfile: ptr SndFile; bufferPtr: ptr cfloat; items: SFCount): SFCount</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">writeFShort
-  <li><a class="reference" href="#writeFShort%2Cptr.SndFile%2Cptr.cshort%2CSFCount" title="writeFShort(sndfile: ptr SndFile; buffer_ptr: ptr cshort; frames: SFCount): SFCount">writeFShort(sndfile: ptr SndFile; buffer_ptr: ptr cshort; frames: SFCount): SFCount</a></li>
+  <li><a class="reference" href="#writeFShort%2Cptr.SndFile%2Cptr.cshort%2CSFCount" title="writeFShort(sndfile: ptr SndFile; bufferPtr: ptr cshort; frames: SFCount): SFCount">writeFShort(sndfile: ptr SndFile; bufferPtr: ptr cshort; frames: SFCount): SFCount</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">writeInt
-  <li><a class="reference" href="#writeInt%2Cptr.SndFile%2Cptr.cint%2CSFCount" title="writeInt(sndfile: ptr SndFile; buffer_ptr: ptr cint; items: SFCount): SFCount">writeInt(sndfile: ptr SndFile; buffer_ptr: ptr cint; items: SFCount): SFCount</a></li>
+  <li><a class="reference" href="#writeInt%2Cptr.SndFile%2Cptr.cint%2CSFCount" title="writeInt(sndfile: ptr SndFile; bufferPtr: ptr cint; items: SFCount): SFCount">writeInt(sndfile: ptr SndFile; bufferPtr: ptr cint; items: SFCount): SFCount</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">writeRaw
+  <li><a class="reference" href="#writeRaw%2Cptr.SndFile%2Cptr.byte%2CSFCount" title="writeRaw(sndfile: ptr SndFile; bufferPtr: ptr byte; numBytes: SFCount)">writeRaw(sndfile: ptr SndFile; bufferPtr: ptr byte; numBytes: SFCount)</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">writeShort
-  <li><a class="reference" href="#writeShort%2Cptr.SndFile%2Cptr.cshort%2CSFCount" title="writeShort(sndfile: ptr SndFile; buffer_ptr: ptr cshort; items: SFCount): SFCount">writeShort(sndfile: ptr SndFile; buffer_ptr: ptr cshort; items: SFCount): SFCount</a></li>
+  <li><a class="reference" href="#writeShort%2Cptr.SndFile%2Cptr.cshort%2CSFCount" title="writeShort(sndfile: ptr SndFile; bufferPtr: ptr cshort; items: SFCount): SFCount">writeShort(sndfile: ptr SndFile; bufferPtr: ptr cshort; items: SFCount): SFCount</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">writeSync
@@ -881,9 +889,24 @@
 </div>
 <div id="getChunkData-procs-all">
   <div id="getChunkData,ptr.SFChunkIterator,ptr.SFChunkInfo">
-  <dt><pre><span class="Keyword">proc</span> <a href="#getChunkData%2Cptr.SFChunkIterator%2Cptr.SFChunkInfo"><span class="Identifier">getChunkData</span></a><span class="Other">(</span><span class="Identifier">it</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SFChunkIterator"><span class="Identifier">SFChunkIterator</span></a><span class="Other">;</span> <span class="Identifier">chunk_info</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SFChunkInfo"><span class="Identifier">SFChunkInfo</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFErr"><span class="Identifier">SFErr</span></a> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#getChunkData%2Cptr.SFChunkIterator%2Cptr.SFChunkInfo"><span class="Identifier">getChunkData</span></a><span class="Other">(</span><span class="Identifier">it</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SFChunkIterator"><span class="Identifier">SFChunkIterator</span></a><span class="Other">;</span> <span class="Identifier">chunkInfo</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SFChunkInfo"><span class="Identifier">SFChunkInfo</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFErr"><span class="Identifier">SFErr</span></a> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_get_chunk_data&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L413" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L413" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
+<div id="getChunkIterator-procs-all">
+  <div id="getChunkIterator,ptr.SndFile,ptr.SFChunkInfo">
+  <dt><pre><span class="Keyword">proc</span> <a href="#getChunkIterator%2Cptr.SndFile%2Cptr.SFChunkInfo"><span class="Identifier">getChunkIterator</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">chunkInfo</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SFChunkInfo"><span class="Identifier">SFChunkInfo</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SFChunkIterator"><span class="Identifier">SFChunkIterator</span></a> {.
+    <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_get_chunk_iterator&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     
@@ -894,31 +917,16 @@
 </div>
 
 </div>
-<div id="getChunkIterator-procs-all">
-  <div id="getChunkIterator,ptr.SndFile,ptr.SFChunkInfo">
-  <dt><pre><span class="Keyword">proc</span> <a href="#getChunkIterator%2Cptr.SndFile%2Cptr.SFChunkInfo"><span class="Identifier">getChunkIterator</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">chunk_info</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SFChunkInfo"><span class="Identifier">SFChunkInfo</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SFChunkIterator"><span class="Identifier">SFChunkIterator</span></a> {.
-    <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_get_chunk_iterator&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
-  <dd>
-    
-    
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L407" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L407" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
-
-  </dd>
-</div>
-
-</div>
 <div id="getChunkSize-procs-all">
   <div id="getChunkSize,ptr.SFChunkIterator,ptr.SFChunkInfo">
-  <dt><pre><span class="Keyword">proc</span> <a href="#getChunkSize%2Cptr.SFChunkIterator%2Cptr.SFChunkInfo"><span class="Identifier">getChunkSize</span></a><span class="Other">(</span><span class="Identifier">it</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SFChunkIterator"><span class="Identifier">SFChunkIterator</span></a><span class="Other">;</span> <span class="Identifier">chunk_info</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SFChunkInfo"><span class="Identifier">SFChunkInfo</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFErr"><span class="Identifier">SFErr</span></a> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#getChunkSize%2Cptr.SFChunkIterator%2Cptr.SFChunkInfo"><span class="Identifier">getChunkSize</span></a><span class="Other">(</span><span class="Identifier">it</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SFChunkIterator"><span class="Identifier">SFChunkIterator</span></a><span class="Other">;</span> <span class="Identifier">chunkInfo</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SFChunkInfo"><span class="Identifier">SFChunkInfo</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFErr"><span class="Identifier">SFErr</span></a> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_get_chunk_size&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L409" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L409" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L412" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L412" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -926,7 +934,7 @@
 </div>
 <div id="getString-procs-all">
   <div id="getString,ptr.SndFile,SFStrType">
-  <dt><pre><span class="Keyword">proc</span> <a href="#getString%2Cptr.SndFile%2CSFStrType"><span class="Identifier">getString</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">str_type</span><span class="Other">:</span> <a href="api.html#SFStrType"><span class="Identifier">SFStrType</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">cdecl</span><span class="Other">,</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#getString%2Cptr.SndFile%2CSFStrType"><span class="Identifier">getString</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">strType</span><span class="Other">:</span> <a href="api.html#SFStrType"><span class="Identifier">SFStrType</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">cdecl</span><span class="Other">,</span>
     <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_get_string&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -946,8 +954,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L408" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L408" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L411" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L411" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -955,7 +963,7 @@
 </div>
 <div id="open-procs-all">
   <div id="open,cstring,SFMode,ptr.SFInfo">
-  <dt><pre><span class="Keyword">proc</span> <a href="#open%2Ccstring%2CSFMode%2Cptr.SFInfo"><span class="Identifier">open</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <a href="api.html#SFMode"><span class="Identifier">SFMode</span></a><span class="Other">;</span> <span class="Identifier">sfinfo</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SFInfo"><span class="Identifier">SFInfo</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#open%2Ccstring%2CSFMode%2Cptr.SFInfo"><span class="Identifier">open</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <a href="api.html#SFMode"><span class="Identifier">SFMode</span></a><span class="Other">;</span> <span class="Identifier">sfInfo</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SFInfo"><span class="Identifier">SFInfo</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span>
     <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_open&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -969,7 +977,7 @@
 </div>
 <div id="readDouble-procs-all">
   <div id="readDouble,ptr.SndFile,ptr.cdouble,SFCount">
-  <dt><pre><span class="Keyword">proc</span> <a href="#readDouble%2Cptr.SndFile%2Cptr.cdouble%2CSFCount"><span class="Identifier">readDouble</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">buffer_ptr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cdouble</span><span class="Other">;</span> <span class="Identifier">items</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#readDouble%2Cptr.SndFile%2Cptr.cdouble%2CSFCount"><span class="Identifier">readDouble</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">bufferPtr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cdouble</span><span class="Other">;</span> <span class="Identifier">items</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_read_double&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -984,7 +992,7 @@
 </div>
 <div id="readFDouble-procs-all">
   <div id="readFDouble,ptr.SndFile,ptr.cdouble,SFCount">
-  <dt><pre><span class="Keyword">proc</span> <a href="#readFDouble%2Cptr.SndFile%2Cptr.cdouble%2CSFCount"><span class="Identifier">readFDouble</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">buffer_ptr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cdouble</span><span class="Other">;</span> <span class="Identifier">frames</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#readFDouble%2Cptr.SndFile%2Cptr.cdouble%2CSFCount"><span class="Identifier">readFDouble</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">bufferPtr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cdouble</span><span class="Other">;</span> <span class="Identifier">frames</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_readf_double&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -999,7 +1007,7 @@
 </div>
 <div id="readFFloat-procs-all">
   <div id="readFFloat,ptr.SndFile,ptr.cfloat,SFCount">
-  <dt><pre><span class="Keyword">proc</span> <a href="#readFFloat%2Cptr.SndFile%2Cptr.cfloat%2CSFCount"><span class="Identifier">readFFloat</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">buffer_ptr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cfloat</span><span class="Other">;</span> <span class="Identifier">frames</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#readFFloat%2Cptr.SndFile%2Cptr.cfloat%2CSFCount"><span class="Identifier">readFFloat</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">bufferPtr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cfloat</span><span class="Other">;</span> <span class="Identifier">frames</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_readf_float&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -1014,7 +1022,7 @@
 </div>
 <div id="readFInt-procs-all">
   <div id="readFInt,ptr.SndFile,ptr.cint,SFCount">
-  <dt><pre><span class="Keyword">proc</span> <a href="#readFInt%2Cptr.SndFile%2Cptr.cint%2CSFCount"><span class="Identifier">readFInt</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">buffer_ptr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">frames</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#readFInt%2Cptr.SndFile%2Cptr.cint%2CSFCount"><span class="Identifier">readFInt</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">bufferPtr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">frames</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_readf_int&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -1029,7 +1037,7 @@
 </div>
 <div id="readFloat-procs-all">
   <div id="readFloat,ptr.SndFile,ptr.cfloat,SFCount">
-  <dt><pre><span class="Keyword">proc</span> <a href="#readFloat%2Cptr.SndFile%2Cptr.cfloat%2CSFCount"><span class="Identifier">readFloat</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">buffer_ptr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cfloat</span><span class="Other">;</span> <span class="Identifier">items</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#readFloat%2Cptr.SndFile%2Cptr.cfloat%2CSFCount"><span class="Identifier">readFloat</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">bufferPtr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cfloat</span><span class="Other">;</span> <span class="Identifier">items</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_read_float&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -1044,7 +1052,7 @@
 </div>
 <div id="readFShort-procs-all">
   <div id="readFShort,ptr.SndFile,ptr.cshort,SFCount">
-  <dt><pre><span class="Keyword">proc</span> <a href="#readFShort%2Cptr.SndFile%2Cptr.cshort%2CSFCount"><span class="Identifier">readFShort</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">buffer_ptr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cshort</span><span class="Other">;</span> <span class="Identifier">frames</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#readFShort%2Cptr.SndFile%2Cptr.cshort%2CSFCount"><span class="Identifier">readFShort</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">bufferPtr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cshort</span><span class="Other">;</span> <span class="Identifier">frames</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_readf_short&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -1059,7 +1067,7 @@
 </div>
 <div id="readInt-procs-all">
   <div id="readInt,ptr.SndFile,ptr.cint,SFCount">
-  <dt><pre><span class="Keyword">proc</span> <a href="#readInt%2Cptr.SndFile%2Cptr.cint%2CSFCount"><span class="Identifier">readInt</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">buffer_ptr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">items</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#readInt%2Cptr.SndFile%2Cptr.cint%2CSFCount"><span class="Identifier">readInt</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">bufferPtr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">items</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_read_int&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -1072,9 +1080,24 @@
 </div>
 
 </div>
+<div id="readRaw-procs-all">
+  <div id="readRaw,ptr.SndFile,ptr.byte,SFCount">
+  <dt><pre><span class="Keyword">proc</span> <a href="#readRaw%2Cptr.SndFile%2Cptr.byte%2CSFCount"><span class="Identifier">readRaw</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">bufferPtr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">byte</span><span class="Other">;</span> <span class="Identifier">numBytes</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
+    <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_read_raw&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L404" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L404" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
 <div id="readShort-procs-all">
   <div id="readShort,ptr.SndFile,ptr.cshort,SFCount">
-  <dt><pre><span class="Keyword">proc</span> <a href="#readShort%2Cptr.SndFile%2Cptr.cshort%2CSFCount"><span class="Identifier">readShort</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">buffer_ptr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cshort</span><span class="Other">;</span> <span class="Identifier">items</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#readShort%2Cptr.SndFile%2Cptr.cshort%2CSFCount"><span class="Identifier">readShort</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">bufferPtr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cshort</span><span class="Other">;</span> <span class="Identifier">items</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_read_short&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -1103,13 +1126,13 @@
 </div>
 <div id="setChunk-procs-all">
   <div id="setChunk,ptr.SndFile,ptr.SFChunkInfo">
-  <dt><pre><span class="Keyword">proc</span> <a href="#setChunk%2Cptr.SndFile%2Cptr.SFChunkInfo"><span class="Identifier">setChunk</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">chunk_info</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SFChunkInfo"><span class="Identifier">SFChunkInfo</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFErr"><span class="Identifier">SFErr</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#setChunk%2Cptr.SndFile%2Cptr.SFChunkInfo"><span class="Identifier">setChunk</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">chunkInfo</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SFChunkInfo"><span class="Identifier">SFChunkInfo</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFErr"><span class="Identifier">SFErr</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span>
     <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_set_chunk&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L406" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L406" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L409" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L409" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1117,7 +1140,7 @@
 </div>
 <div id="setString-procs-all">
   <div id="setString,ptr.SndFile,SFStrType,cstring">
-  <dt><pre><span class="Keyword">proc</span> <a href="#setString%2Cptr.SndFile%2CSFStrType%2Ccstring"><span class="Identifier">setString</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">str_type</span><span class="Other">:</span> <a href="api.html#SFStrType"><span class="Identifier">SFStrType</span></a><span class="Other">;</span> <span class="Identifier">str</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#setString%2Cptr.SndFile%2CSFStrType%2Ccstring"><span class="Identifier">setString</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">strType</span><span class="Other">:</span> <a href="api.html#SFStrType"><span class="Identifier">SFStrType</span></a><span class="Other">;</span> <span class="Identifier">str</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_set_string&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -1161,7 +1184,7 @@
 </div>
 <div id="writeDouble-procs-all">
   <div id="writeDouble,ptr.SndFile,ptr.cdouble,SFCount">
-  <dt><pre><span class="Keyword">proc</span> <a href="#writeDouble%2Cptr.SndFile%2Cptr.cdouble%2CSFCount"><span class="Identifier">writeDouble</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">buffer_ptr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cdouble</span><span class="Other">;</span> <span class="Identifier">items</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#writeDouble%2Cptr.SndFile%2Cptr.cdouble%2CSFCount"><span class="Identifier">writeDouble</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">bufferPtr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cdouble</span><span class="Other">;</span> <span class="Identifier">items</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_write_double&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -1176,7 +1199,7 @@
 </div>
 <div id="writeFDouble-procs-all">
   <div id="writeFDouble,ptr.SndFile,ptr.cdouble,SFCount">
-  <dt><pre><span class="Keyword">proc</span> <a href="#writeFDouble%2Cptr.SndFile%2Cptr.cdouble%2CSFCount"><span class="Identifier">writeFDouble</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">buffer_ptr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cdouble</span><span class="Other">;</span> <span class="Identifier">frames</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#writeFDouble%2Cptr.SndFile%2Cptr.cdouble%2CSFCount"><span class="Identifier">writeFDouble</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">bufferPtr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cdouble</span><span class="Other">;</span> <span class="Identifier">frames</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_writef_double&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -1191,7 +1214,7 @@
 </div>
 <div id="writeFFloat-procs-all">
   <div id="writeFFloat,ptr.SndFile,ptr.cfloat,SFCount">
-  <dt><pre><span class="Keyword">proc</span> <a href="#writeFFloat%2Cptr.SndFile%2Cptr.cfloat%2CSFCount"><span class="Identifier">writeFFloat</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">buffer_ptr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cfloat</span><span class="Other">;</span> <span class="Identifier">frames</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#writeFFloat%2Cptr.SndFile%2Cptr.cfloat%2CSFCount"><span class="Identifier">writeFFloat</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">bufferPtr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cfloat</span><span class="Other">;</span> <span class="Identifier">frames</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_writef_float&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -1206,7 +1229,7 @@
 </div>
 <div id="writeFInt-procs-all">
   <div id="writeFInt,ptr.SndFile,ptr.cint,SFCount">
-  <dt><pre><span class="Keyword">proc</span> <a href="#writeFInt%2Cptr.SndFile%2Cptr.cint%2CSFCount"><span class="Identifier">writeFInt</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">buffer_ptr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">frames</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#writeFInt%2Cptr.SndFile%2Cptr.cint%2CSFCount"><span class="Identifier">writeFInt</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">bufferPtr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">frames</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_writef_int&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -1221,7 +1244,7 @@
 </div>
 <div id="writeFloat-procs-all">
   <div id="writeFloat,ptr.SndFile,ptr.cfloat,SFCount">
-  <dt><pre><span class="Keyword">proc</span> <a href="#writeFloat%2Cptr.SndFile%2Cptr.cfloat%2CSFCount"><span class="Identifier">writeFloat</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">buffer_ptr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cfloat</span><span class="Other">;</span> <span class="Identifier">items</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#writeFloat%2Cptr.SndFile%2Cptr.cfloat%2CSFCount"><span class="Identifier">writeFloat</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">bufferPtr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cfloat</span><span class="Other">;</span> <span class="Identifier">items</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_write_float&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -1236,7 +1259,7 @@
 </div>
 <div id="writeFShort-procs-all">
   <div id="writeFShort,ptr.SndFile,ptr.cshort,SFCount">
-  <dt><pre><span class="Keyword">proc</span> <a href="#writeFShort%2Cptr.SndFile%2Cptr.cshort%2CSFCount"><span class="Identifier">writeFShort</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">buffer_ptr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cshort</span><span class="Other">;</span> <span class="Identifier">frames</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#writeFShort%2Cptr.SndFile%2Cptr.cshort%2CSFCount"><span class="Identifier">writeFShort</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">bufferPtr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cshort</span><span class="Other">;</span> <span class="Identifier">frames</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_writef_short&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -1251,7 +1274,7 @@
 </div>
 <div id="writeInt-procs-all">
   <div id="writeInt,ptr.SndFile,ptr.cint,SFCount">
-  <dt><pre><span class="Keyword">proc</span> <a href="#writeInt%2Cptr.SndFile%2Cptr.cint%2CSFCount"><span class="Identifier">writeInt</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">buffer_ptr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">items</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#writeInt%2Cptr.SndFile%2Cptr.cint%2CSFCount"><span class="Identifier">writeInt</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">bufferPtr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">items</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_write_int&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -1264,9 +1287,24 @@
 </div>
 
 </div>
+<div id="writeRaw-procs-all">
+  <div id="writeRaw,ptr.SndFile,ptr.byte,SFCount">
+  <dt><pre><span class="Keyword">proc</span> <a href="#writeRaw%2Cptr.SndFile%2Cptr.byte%2CSFCount"><span class="Identifier">writeRaw</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">bufferPtr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">byte</span><span class="Other">;</span> <span class="Identifier">numBytes</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span> {.
+    <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_write_raw&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L405" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L405" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
 <div id="writeShort-procs-all">
   <div id="writeShort,ptr.SndFile,ptr.cshort,SFCount">
-  <dt><pre><span class="Keyword">proc</span> <a href="#writeShort%2Cptr.SndFile%2Cptr.cshort%2CSFCount"><span class="Identifier">writeShort</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">buffer_ptr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cshort</span><span class="Other">;</span> <span class="Identifier">items</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#writeShort%2Cptr.SndFile%2Cptr.cshort%2CSFCount"><span class="Identifier">writeShort</span></a><span class="Other">(</span><span class="Identifier">sndfile</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="api.html#SndFile"><span class="Identifier">SndFile</span></a><span class="Other">;</span> <span class="Identifier">bufferPtr</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cshort</span><span class="Other">;</span> <span class="Identifier">items</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a><span class="Other">)</span><span class="Other">:</span> <a href="api.html#SFCount"><span class="Identifier">SFCount</span></a> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">soname</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;sf_write_short&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -1287,8 +1325,8 @@
   <dd>
     
     
-    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L404" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L404" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/SpotlightKid/nim-sndfile/tree/master/src/sndfile/api.nim#L407" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/SpotlightKid/nim-sndfile/edit/devel/src/sndfile/api.nim#L407" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -1304,7 +1342,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2025-01-21 18:03:27 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2025-01-21 18:08:38 UTC</small>
       </div>
     </div>
   </div>

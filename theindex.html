@@ -56,19 +56,19 @@
           </ul></dd>
 <dt><a name="getChunkData" href="#getChunkData"><span>getChunkData:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="api: proc getChunkData(it: ptr SFChunkIterator; chunk_info: ptr SFChunkInfo): SFErr" href="sndfile/api.html#getChunkData%2Cptr.SFChunkIterator%2Cptr.SFChunkInfo">api: proc getChunkData(it: ptr SFChunkIterator; chunk_info: ptr SFChunkInfo): SFErr</a></li>
+          data-doc-search-tag="api: proc getChunkData(it: ptr SFChunkIterator; chunkInfo: ptr SFChunkInfo): SFErr" href="sndfile/api.html#getChunkData%2Cptr.SFChunkIterator%2Cptr.SFChunkInfo">api: proc getChunkData(it: ptr SFChunkIterator; chunkInfo: ptr SFChunkInfo): SFErr</a></li>
           </ul></dd>
 <dt><a name="getChunkIterator" href="#getChunkIterator"><span>getChunkIterator:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="api: proc getChunkIterator(sndfile: ptr SndFile; chunk_info: ptr SFChunkInfo): ptr SFChunkIterator" href="sndfile/api.html#getChunkIterator%2Cptr.SndFile%2Cptr.SFChunkInfo">api: proc getChunkIterator(sndfile: ptr SndFile; chunk_info: ptr SFChunkInfo): ptr SFChunkIterator</a></li>
+          data-doc-search-tag="api: proc getChunkIterator(sndfile: ptr SndFile; chunkInfo: ptr SFChunkInfo): ptr SFChunkIterator" href="sndfile/api.html#getChunkIterator%2Cptr.SndFile%2Cptr.SFChunkInfo">api: proc getChunkIterator(sndfile: ptr SndFile; chunkInfo: ptr SFChunkInfo): ptr SFChunkIterator</a></li>
           </ul></dd>
 <dt><a name="getChunkSize" href="#getChunkSize"><span>getChunkSize:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="api: proc getChunkSize(it: ptr SFChunkIterator; chunk_info: ptr SFChunkInfo): SFErr" href="sndfile/api.html#getChunkSize%2Cptr.SFChunkIterator%2Cptr.SFChunkInfo">api: proc getChunkSize(it: ptr SFChunkIterator; chunk_info: ptr SFChunkInfo): SFErr</a></li>
+          data-doc-search-tag="api: proc getChunkSize(it: ptr SFChunkIterator; chunkInfo: ptr SFChunkInfo): SFErr" href="sndfile/api.html#getChunkSize%2Cptr.SFChunkIterator%2Cptr.SFChunkInfo">api: proc getChunkSize(it: ptr SFChunkIterator; chunkInfo: ptr SFChunkInfo): SFErr</a></li>
           </ul></dd>
 <dt><a name="getString" href="#getString"><span>getString:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="api: proc getString(sndfile: ptr SndFile; str_type: SFStrType): cstring" href="sndfile/api.html#getString%2Cptr.SndFile%2CSFStrType">api: proc getString(sndfile: ptr SndFile; str_type: SFStrType): cstring</a></li>
+          data-doc-search-tag="api: proc getString(sndfile: ptr SndFile; strType: SFStrType): cstring" href="sndfile/api.html#getString%2Cptr.SndFile%2CSFStrType">api: proc getString(sndfile: ptr SndFile; strType: SFStrType): cstring</a></li>
           </ul></dd>
 <dt><a name="nextChunkIterator" href="#nextChunkIterator"><span>nextChunkIterator:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -76,39 +76,43 @@
           </ul></dd>
 <dt><a name="open" href="#open"><span>open:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="api: proc open(path: cstring; mode: SFMode; sfinfo: ptr SFInfo): ptr SndFile" href="sndfile/api.html#open%2Ccstring%2CSFMode%2Cptr.SFInfo">api: proc open(path: cstring; mode: SFMode; sfinfo: ptr SFInfo): ptr SndFile</a></li>
+          data-doc-search-tag="api: proc open(path: cstring; mode: SFMode; sfInfo: ptr SFInfo): ptr SndFile" href="sndfile/api.html#open%2Ccstring%2CSFMode%2Cptr.SFInfo">api: proc open(path: cstring; mode: SFMode; sfInfo: ptr SFInfo): ptr SndFile</a></li>
           </ul></dd>
 <dt><a name="readDouble" href="#readDouble"><span>readDouble:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="api: proc readDouble(sndfile: ptr SndFile; buffer_ptr: ptr cdouble; items: SFCount): SFCount" href="sndfile/api.html#readDouble%2Cptr.SndFile%2Cptr.cdouble%2CSFCount">api: proc readDouble(sndfile: ptr SndFile; buffer_ptr: ptr cdouble; items: SFCount): SFCount</a></li>
+          data-doc-search-tag="api: proc readDouble(sndfile: ptr SndFile; bufferPtr: ptr cdouble; items: SFCount): SFCount" href="sndfile/api.html#readDouble%2Cptr.SndFile%2Cptr.cdouble%2CSFCount">api: proc readDouble(sndfile: ptr SndFile; bufferPtr: ptr cdouble; items: SFCount): SFCount</a></li>
           </ul></dd>
 <dt><a name="readFDouble" href="#readFDouble"><span>readFDouble:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="api: proc readFDouble(sndfile: ptr SndFile; buffer_ptr: ptr cdouble; frames: SFCount): SFCount" href="sndfile/api.html#readFDouble%2Cptr.SndFile%2Cptr.cdouble%2CSFCount">api: proc readFDouble(sndfile: ptr SndFile; buffer_ptr: ptr cdouble; frames: SFCount): SFCount</a></li>
+          data-doc-search-tag="api: proc readFDouble(sndfile: ptr SndFile; bufferPtr: ptr cdouble; frames: SFCount): SFCount" href="sndfile/api.html#readFDouble%2Cptr.SndFile%2Cptr.cdouble%2CSFCount">api: proc readFDouble(sndfile: ptr SndFile; bufferPtr: ptr cdouble; frames: SFCount): SFCount</a></li>
           </ul></dd>
 <dt><a name="readFFloat" href="#readFFloat"><span>readFFloat:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="api: proc readFFloat(sndfile: ptr SndFile; buffer_ptr: ptr cfloat; frames: SFCount): SFCount" href="sndfile/api.html#readFFloat%2Cptr.SndFile%2Cptr.cfloat%2CSFCount">api: proc readFFloat(sndfile: ptr SndFile; buffer_ptr: ptr cfloat; frames: SFCount): SFCount</a></li>
+          data-doc-search-tag="api: proc readFFloat(sndfile: ptr SndFile; bufferPtr: ptr cfloat; frames: SFCount): SFCount" href="sndfile/api.html#readFFloat%2Cptr.SndFile%2Cptr.cfloat%2CSFCount">api: proc readFFloat(sndfile: ptr SndFile; bufferPtr: ptr cfloat; frames: SFCount): SFCount</a></li>
           </ul></dd>
 <dt><a name="readFInt" href="#readFInt"><span>readFInt:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="api: proc readFInt(sndfile: ptr SndFile; buffer_ptr: ptr cint; frames: SFCount): SFCount" href="sndfile/api.html#readFInt%2Cptr.SndFile%2Cptr.cint%2CSFCount">api: proc readFInt(sndfile: ptr SndFile; buffer_ptr: ptr cint; frames: SFCount): SFCount</a></li>
+          data-doc-search-tag="api: proc readFInt(sndfile: ptr SndFile; bufferPtr: ptr cint; frames: SFCount): SFCount" href="sndfile/api.html#readFInt%2Cptr.SndFile%2Cptr.cint%2CSFCount">api: proc readFInt(sndfile: ptr SndFile; bufferPtr: ptr cint; frames: SFCount): SFCount</a></li>
           </ul></dd>
 <dt><a name="readFloat" href="#readFloat"><span>readFloat:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="api: proc readFloat(sndfile: ptr SndFile; buffer_ptr: ptr cfloat; items: SFCount): SFCount" href="sndfile/api.html#readFloat%2Cptr.SndFile%2Cptr.cfloat%2CSFCount">api: proc readFloat(sndfile: ptr SndFile; buffer_ptr: ptr cfloat; items: SFCount): SFCount</a></li>
+          data-doc-search-tag="api: proc readFloat(sndfile: ptr SndFile; bufferPtr: ptr cfloat; items: SFCount): SFCount" href="sndfile/api.html#readFloat%2Cptr.SndFile%2Cptr.cfloat%2CSFCount">api: proc readFloat(sndfile: ptr SndFile; bufferPtr: ptr cfloat; items: SFCount): SFCount</a></li>
           </ul></dd>
 <dt><a name="readFShort" href="#readFShort"><span>readFShort:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="api: proc readFShort(sndfile: ptr SndFile; buffer_ptr: ptr cshort; frames: SFCount): SFCount" href="sndfile/api.html#readFShort%2Cptr.SndFile%2Cptr.cshort%2CSFCount">api: proc readFShort(sndfile: ptr SndFile; buffer_ptr: ptr cshort; frames: SFCount): SFCount</a></li>
+          data-doc-search-tag="api: proc readFShort(sndfile: ptr SndFile; bufferPtr: ptr cshort; frames: SFCount): SFCount" href="sndfile/api.html#readFShort%2Cptr.SndFile%2Cptr.cshort%2CSFCount">api: proc readFShort(sndfile: ptr SndFile; bufferPtr: ptr cshort; frames: SFCount): SFCount</a></li>
           </ul></dd>
 <dt><a name="readInt" href="#readInt"><span>readInt:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="api: proc readInt(sndfile: ptr SndFile; buffer_ptr: ptr cint; items: SFCount): SFCount" href="sndfile/api.html#readInt%2Cptr.SndFile%2Cptr.cint%2CSFCount">api: proc readInt(sndfile: ptr SndFile; buffer_ptr: ptr cint; items: SFCount): SFCount</a></li>
+          data-doc-search-tag="api: proc readInt(sndfile: ptr SndFile; bufferPtr: ptr cint; items: SFCount): SFCount" href="sndfile/api.html#readInt%2Cptr.SndFile%2Cptr.cint%2CSFCount">api: proc readInt(sndfile: ptr SndFile; bufferPtr: ptr cint; items: SFCount): SFCount</a></li>
+          </ul></dd>
+<dt><a name="readRaw" href="#readRaw"><span>readRaw:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="api: proc readRaw(sndfile: ptr SndFile; bufferPtr: ptr byte; numBytes: SFCount): SFCount" href="sndfile/api.html#readRaw%2Cptr.SndFile%2Cptr.byte%2CSFCount">api: proc readRaw(sndfile: ptr SndFile; bufferPtr: ptr byte; numBytes: SFCount): SFCount</a></li>
           </ul></dd>
 <dt><a name="readShort" href="#readShort"><span>readShort:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="api: proc readShort(sndfile: ptr SndFile; buffer_ptr: ptr cshort; items: SFCount): SFCount" href="sndfile/api.html#readShort%2Cptr.SndFile%2Cptr.cshort%2CSFCount">api: proc readShort(sndfile: ptr SndFile; buffer_ptr: ptr cshort; items: SFCount): SFCount</a></li>
+          data-doc-search-tag="api: proc readShort(sndfile: ptr SndFile; bufferPtr: ptr cshort; items: SFCount): SFCount" href="sndfile/api.html#readShort%2Cptr.SndFile%2Cptr.cshort%2CSFCount">api: proc readShort(sndfile: ptr SndFile; bufferPtr: ptr cshort; items: SFCount): SFCount</a></li>
           </ul></dd>
 <dt><a name="seek" href="#seek"><span>seek:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -116,11 +120,11 @@
           </ul></dd>
 <dt><a name="setChunk" href="#setChunk"><span>setChunk:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="api: proc setChunk(sndfile: ptr SndFile; chunk_info: ptr SFChunkInfo): SFErr" href="sndfile/api.html#setChunk%2Cptr.SndFile%2Cptr.SFChunkInfo">api: proc setChunk(sndfile: ptr SndFile; chunk_info: ptr SFChunkInfo): SFErr</a></li>
+          data-doc-search-tag="api: proc setChunk(sndfile: ptr SndFile; chunkInfo: ptr SFChunkInfo): SFErr" href="sndfile/api.html#setChunk%2Cptr.SndFile%2Cptr.SFChunkInfo">api: proc setChunk(sndfile: ptr SndFile; chunkInfo: ptr SFChunkInfo): SFErr</a></li>
           </ul></dd>
 <dt><a name="setString" href="#setString"><span>setString:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="api: proc setString(sndfile: ptr SndFile; str_type: SFStrType; str: cstring): cint" href="sndfile/api.html#setString%2Cptr.SndFile%2CSFStrType%2Ccstring">api: proc setString(sndfile: ptr SndFile; str_type: SFStrType; str: cstring): cint</a></li>
+          data-doc-search-tag="api: proc setString(sndfile: ptr SndFile; strType: SFStrType; str: cstring): cint" href="sndfile/api.html#setString%2Cptr.SndFile%2CSFStrType%2Ccstring">api: proc setString(sndfile: ptr SndFile; strType: SFStrType; str: cstring): cint</a></li>
           </ul></dd>
 <dt><a name="SFAmbisonic" href="#SFAmbisonic"><span>SFAmbisonic:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -248,35 +252,39 @@
           </ul></dd>
 <dt><a name="writeDouble" href="#writeDouble"><span>writeDouble:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="api: proc writeDouble(sndfile: ptr SndFile; buffer_ptr: ptr cdouble; items: SFCount): SFCount" href="sndfile/api.html#writeDouble%2Cptr.SndFile%2Cptr.cdouble%2CSFCount">api: proc writeDouble(sndfile: ptr SndFile; buffer_ptr: ptr cdouble; items: SFCount): SFCount</a></li>
+          data-doc-search-tag="api: proc writeDouble(sndfile: ptr SndFile; bufferPtr: ptr cdouble; items: SFCount): SFCount" href="sndfile/api.html#writeDouble%2Cptr.SndFile%2Cptr.cdouble%2CSFCount">api: proc writeDouble(sndfile: ptr SndFile; bufferPtr: ptr cdouble; items: SFCount): SFCount</a></li>
           </ul></dd>
 <dt><a name="writeFDouble" href="#writeFDouble"><span>writeFDouble:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="api: proc writeFDouble(sndfile: ptr SndFile; buffer_ptr: ptr cdouble; frames: SFCount): SFCount" href="sndfile/api.html#writeFDouble%2Cptr.SndFile%2Cptr.cdouble%2CSFCount">api: proc writeFDouble(sndfile: ptr SndFile; buffer_ptr: ptr cdouble; frames: SFCount): SFCount</a></li>
+          data-doc-search-tag="api: proc writeFDouble(sndfile: ptr SndFile; bufferPtr: ptr cdouble; frames: SFCount): SFCount" href="sndfile/api.html#writeFDouble%2Cptr.SndFile%2Cptr.cdouble%2CSFCount">api: proc writeFDouble(sndfile: ptr SndFile; bufferPtr: ptr cdouble; frames: SFCount): SFCount</a></li>
           </ul></dd>
 <dt><a name="writeFFloat" href="#writeFFloat"><span>writeFFloat:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="api: proc writeFFloat(sndfile: ptr SndFile; buffer_ptr: ptr cfloat; frames: SFCount): SFCount" href="sndfile/api.html#writeFFloat%2Cptr.SndFile%2Cptr.cfloat%2CSFCount">api: proc writeFFloat(sndfile: ptr SndFile; buffer_ptr: ptr cfloat; frames: SFCount): SFCount</a></li>
+          data-doc-search-tag="api: proc writeFFloat(sndfile: ptr SndFile; bufferPtr: ptr cfloat; frames: SFCount): SFCount" href="sndfile/api.html#writeFFloat%2Cptr.SndFile%2Cptr.cfloat%2CSFCount">api: proc writeFFloat(sndfile: ptr SndFile; bufferPtr: ptr cfloat; frames: SFCount): SFCount</a></li>
           </ul></dd>
 <dt><a name="writeFInt" href="#writeFInt"><span>writeFInt:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="api: proc writeFInt(sndfile: ptr SndFile; buffer_ptr: ptr cint; frames: SFCount): SFCount" href="sndfile/api.html#writeFInt%2Cptr.SndFile%2Cptr.cint%2CSFCount">api: proc writeFInt(sndfile: ptr SndFile; buffer_ptr: ptr cint; frames: SFCount): SFCount</a></li>
+          data-doc-search-tag="api: proc writeFInt(sndfile: ptr SndFile; bufferPtr: ptr cint; frames: SFCount): SFCount" href="sndfile/api.html#writeFInt%2Cptr.SndFile%2Cptr.cint%2CSFCount">api: proc writeFInt(sndfile: ptr SndFile; bufferPtr: ptr cint; frames: SFCount): SFCount</a></li>
           </ul></dd>
 <dt><a name="writeFloat" href="#writeFloat"><span>writeFloat:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="api: proc writeFloat(sndfile: ptr SndFile; buffer_ptr: ptr cfloat; items: SFCount): SFCount" href="sndfile/api.html#writeFloat%2Cptr.SndFile%2Cptr.cfloat%2CSFCount">api: proc writeFloat(sndfile: ptr SndFile; buffer_ptr: ptr cfloat; items: SFCount): SFCount</a></li>
+          data-doc-search-tag="api: proc writeFloat(sndfile: ptr SndFile; bufferPtr: ptr cfloat; items: SFCount): SFCount" href="sndfile/api.html#writeFloat%2Cptr.SndFile%2Cptr.cfloat%2CSFCount">api: proc writeFloat(sndfile: ptr SndFile; bufferPtr: ptr cfloat; items: SFCount): SFCount</a></li>
           </ul></dd>
 <dt><a name="writeFShort" href="#writeFShort"><span>writeFShort:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="api: proc writeFShort(sndfile: ptr SndFile; buffer_ptr: ptr cshort; frames: SFCount): SFCount" href="sndfile/api.html#writeFShort%2Cptr.SndFile%2Cptr.cshort%2CSFCount">api: proc writeFShort(sndfile: ptr SndFile; buffer_ptr: ptr cshort; frames: SFCount): SFCount</a></li>
+          data-doc-search-tag="api: proc writeFShort(sndfile: ptr SndFile; bufferPtr: ptr cshort; frames: SFCount): SFCount" href="sndfile/api.html#writeFShort%2Cptr.SndFile%2Cptr.cshort%2CSFCount">api: proc writeFShort(sndfile: ptr SndFile; bufferPtr: ptr cshort; frames: SFCount): SFCount</a></li>
           </ul></dd>
 <dt><a name="writeInt" href="#writeInt"><span>writeInt:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="api: proc writeInt(sndfile: ptr SndFile; buffer_ptr: ptr cint; items: SFCount): SFCount" href="sndfile/api.html#writeInt%2Cptr.SndFile%2Cptr.cint%2CSFCount">api: proc writeInt(sndfile: ptr SndFile; buffer_ptr: ptr cint; items: SFCount): SFCount</a></li>
+          data-doc-search-tag="api: proc writeInt(sndfile: ptr SndFile; bufferPtr: ptr cint; items: SFCount): SFCount" href="sndfile/api.html#writeInt%2Cptr.SndFile%2Cptr.cint%2CSFCount">api: proc writeInt(sndfile: ptr SndFile; bufferPtr: ptr cint; items: SFCount): SFCount</a></li>
+          </ul></dd>
+<dt><a name="writeRaw" href="#writeRaw"><span>writeRaw:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="api: proc writeRaw(sndfile: ptr SndFile; bufferPtr: ptr byte; numBytes: SFCount)" href="sndfile/api.html#writeRaw%2Cptr.SndFile%2Cptr.byte%2CSFCount">api: proc writeRaw(sndfile: ptr SndFile; bufferPtr: ptr byte; numBytes: SFCount)</a></li>
           </ul></dd>
 <dt><a name="writeShort" href="#writeShort"><span>writeShort:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="api: proc writeShort(sndfile: ptr SndFile; buffer_ptr: ptr cshort; items: SFCount): SFCount" href="sndfile/api.html#writeShort%2Cptr.SndFile%2Cptr.cshort%2CSFCount">api: proc writeShort(sndfile: ptr SndFile; buffer_ptr: ptr cshort; items: SFCount): SFCount</a></li>
+          data-doc-search-tag="api: proc writeShort(sndfile: ptr SndFile; bufferPtr: ptr cshort; items: SFCount): SFCount" href="sndfile/api.html#writeShort%2Cptr.SndFile%2Cptr.cshort%2CSFCount">api: proc writeShort(sndfile: ptr SndFile; bufferPtr: ptr cshort; items: SFCount): SFCount</a></li>
           </ul></dd>
 <dt><a name="writeSync" href="#writeSync"><span>writeSync:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -286,7 +294,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2025-01-21 18:03:27 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2025-01-21 18:08:38 UTC</small>
       </div>
     </div>
   </div>
