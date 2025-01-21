@@ -48,7 +48,7 @@ jobs:
           choco: libsndfile
       - name: Update PATH (Windows)
         if: runner.os == 'Windows'
-        run: Add-Content $env:GITHUB_PATH "C:\Program Files (x86)\libsndfile\bin"
+        run: Add-Content $env:GITHUB_PATH "C:\Program Files\libsndfile\bin"
       - name: Update DYLD_LIBRARY_PATH (macOS)
         if: runner.os == 'macOS'
         run: echo "DYLD_LIBRARY_PATH=$(brew --prefix)/lib" >> "$GITHUB_ENV"
