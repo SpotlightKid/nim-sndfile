@@ -85,7 +85,7 @@ suite "Tests for reading chunks from a WAV file":
     var smpl = cast[ptr SmplChunk](ci.data)
     smpl.manufacturer = [1.byte, 0, 0, 1]
     smpl.samplePeriod = int32(1_000_000_000 / infoIn.samplerate)
-    smpl.midiUnityNote = 67
+    smpl.midiUnityNote = 69
     smpl.loopCount = 1
 
     var loop = cast[ptr SmplLoop](smpl.loops[0].addr)
@@ -118,7 +118,7 @@ suite "Tests for reading chunks from a WAV file":
         sfIn,
         manufacturer = [1.byte, 0, 0, 1],
         samplePeriod = 20833,
-        midiUnityNote = 67,
+        midiUnityNote = 69,
         samplerDataLen = 0,
         loopCount = 1,
         loopType = 0,
