@@ -9,11 +9,14 @@ skipDirs = @["examples"]
 requires "nim >= 2.0"
 
 taskrequires "examples", "sdl2"
+taskrequires "examples", "jacket >= 0.2.0"
 taskrequires "examples_debug", "sdl2"
+taskrequires "examples_debug", "jacket >= 0.2.0"
 
 let examples = @[
     "dump_loops",
     "list_formats",
+    "playfile_jack",
     "playfile_sdl",
 ]
 
