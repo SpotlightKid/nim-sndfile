@@ -14,8 +14,6 @@ implemented functions) and wraps all functions, *except* the following:
 * `sf_open_fd`
 * `sf_open_virtual`
 * `sf_wchar_open`
-* `sf_read_raw`
-* `sf_write_raw`
 
 These missing functions may be added in future versions, if it makes sense to
 use them in Nim.
