@@ -1,4 +1,4 @@
-version = "0.2.2"
+version = "0.2.4"
 author = "Julien Aubert, Christopher Arndt"
 description = "Wrapper for libsndfile"
 license = "MIT"
