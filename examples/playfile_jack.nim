@@ -136,9 +136,9 @@ proc main() =
     quit(QuitFailure)
 
   # Print libsndfile version
-  echo &"libsdnfile version: {versionString()}"
+  info &"libsdnfile version: {versionString()}"
   # Print JACK version
-  echo &"JACK version: {getVersionString()}"
+  info &"JACK version: {getVersionString()}"
 
   # Create JACK client
   setErrorFunction(errorCb)
@@ -162,14 +162,14 @@ proc main() =
     cleanup()
     freeShared(audio.samples)
 
-  echo &"Channels: {audio.channels}"
-  echo &"Samplerate: {audio.samplerate}"
-  echo &"Frames: {audio.frames}"
+  info &"Channels: {audio.channels}"
+  info &"Samplerate: {audio.samplerate}"
+  info &"Frames: {audio.frames}"
 
   var jackSampleRate = int(jclient.getSamplerate())
 
   if audio.samplerate != jackSampleRate:
-    echo &"Resampling audio to {jackSampleRate} Hz ..."
+    info &"Resampling audio to {jackSampleRate} Hz ..."
     try:
       var resampled = convertSampleRate(audio.samples, audio.frames, audio.samplerate, jackSampleRate, audio.channels)
       freeShared(audio.samples)
@@ -178,7 +178,7 @@ proc main() =
     except CatchableError:
       error getCurrentExceptionMsg()
       quit QuitFailure
-    echo "Ready."
+    info "Ready."
 
   # Set up signal handlers to clean up on exit
   when defined(windows):
