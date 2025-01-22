@@ -67,7 +67,13 @@ proc readAudio(filename: string): AudioFile =
   if samples.isNil:
     raise newException(ResourceExhaustedError, "Error allocating memory for sample buffer")
 
-  result.frames = sf.readFFloat(samples, info.frames)
+  var samplesRead = sf.readFFloat(samples, info.frames)
+
+  if samplesRead != info.frames:
+    warn "Mismatch between # samples read (as returned by sf_readf_float) and info.frames:"
+    warn &"{samplesRead} != {info.frames}"
+
+  result.frames = if samplesRead != 0: samplesRead else: info.frames
   result.samples = cast[SampleBuffer](samples)
   result.channels = info.channels
   result.samplerate = info.samplerate
