@@ -8,8 +8,8 @@ else:
 {.pragma: libsnd, cdecl, dynlib: soname.}
 
 
-const codingHistSize {.strdefine: "sfCodingHistSize".}: uint32 = 256
-const maxTagTextSize {.strdefine: "sfMaxTagTextSize".}: uint32 = 256
+const codingHistSize {.intdefine: "sfCodingHistSize".}: uint32 = 256
+const maxTagTextSize {.intdefine: "sfMaxTagTextSize".}: uint32 = 256
 
 
 type
