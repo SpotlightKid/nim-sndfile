@@ -1,7 +1,7 @@
 name: Run tests and build examples
 on: [push, pull_request]
 env:
-  nim_version: "2.2.0"
+  nim_version: "2.2.4"
 jobs:
   build:
     strategy:

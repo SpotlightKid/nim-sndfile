@@ -21,3 +21,4 @@ nimblecache/
 
 # Dot files (don't accidentally add .env files etc.)
 .*
+!.github/
