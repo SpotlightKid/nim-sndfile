@@ -188,8 +188,8 @@ type
     TYPEMASK = 0x0FFF0000
     ENDMASK = 0x30000000
 
-  # We put the endian-ness options in a a separate enum, because Nim enums
-  # don't allow duplicate values and values must be increasing
+  # We put the endian-ness options in a separate enum, because Nim enums
+  # don't allow duplicate values and values must be increasing.
   SFEndian* {.pure, size: sizeof(cint).} = enum
     FILE = 0x00000000
     LITTLE = 0x10000000
