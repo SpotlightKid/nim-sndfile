@@ -13,6 +13,12 @@ taskrequires "examples", "jacket >= 0.2.0"
 taskrequires "examples_debug", "sdl2"
 taskrequires "examples_debug", "jacket >= 0.2.0"
 
+feature "jack":
+    requires "jacket >= 0.2.0"
+
+feature "sdl":
+    requires "sdl2"
+
 let examples = @[
     "dump_loops",
     "list_formats",
@@ -29,3 +35,4 @@ task examples_debug, "Build examples (debug)":
     for example in examples:
         echo "Building example '" & example & "' (debug)..."
         selfExec("compile examples/" & example & ".nim")
+
