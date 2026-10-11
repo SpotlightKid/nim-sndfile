@@ -1,4 +1,4 @@
-nimTitle	api	sndfile/api.html	module src/sndfile/api		0
+nimTitle	api	sndfile/api.html	module sndfile/api		0
 nim	SFBool	sndfile/api.html#SFBool	enum SFBool		18
 nim	SFMode	sndfile/api.html#SFMode	enum SFMode		22
 nim	SFAmbisonic	sndfile/api.html#SFAmbisonic	enum SFAmbisonic		27
