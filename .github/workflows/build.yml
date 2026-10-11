@@ -1,7 +1,7 @@
 name: Run tests and build examples
 on: [push, pull_request]
 env:
-  nim_version: "2.2.6"
+  nim_version: "2.2.12"
 jobs:
   build:
     strategy:
@@ -13,10 +13,10 @@ jobs:
 
     steps:
       - name: Check out sources
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Nim Runtime Cache
         id: cache-nim
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ".nim_runtime"
           key: ${{ runner.os }}-nim-${{ env.nim_version }}
@@ -53,8 +53,9 @@ jobs:
         if: runner.os == 'macOS'
         run: echo "DYLD_LIBRARY_PATH=$(brew --prefix)/lib" >> "$GITHUB_ENV"
       - name: Run tests
-        run: nimble test -y
+        run: nimble --verbose test -y
       - name: Build examples (debug)
-        run: nimble examples_debug
+        run: nimble --verbose --features:"jack;sdl" examples_debug
       - name: Build examples (release)
-        run: nimble examples
+        run: nimble --verbose --features:"jack;sdl" examples
+
